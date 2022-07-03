@@ -51,25 +51,47 @@
 *** no
 ** xp
 *** 355,000
-** speed:30
-** hit dice: 20d8
-** hp: 1d8 (or 5) + con mod / warlock level after 1st 
-** proficiencies:
+** speed
+*** 30 + 5
+** hit dice
+***  20d8
+** hp
+***  1d8 (or 5) + con mod / warlock level after 1st
+** proficiencies
 *** light armor
 *** simple weapons
-*** saving throws:
-**** wis, cha
+*** saving throws
+**** wis
+**** cha
 *** skills:
-**** arcana, deception, history, intimidation, investigation, nature, religion
+**** arcana
+**** deception
+**** history
+**** intimidation
+**** investigation
+**** nature,
+**** religion
 * personality
 ** traits 
 ** ideals
 ** bonds
 ** flaws
 *** prone to stealing
+* feats
+** racial
+*** squat nimbleness
++Prerequisite: Dwarf or a Small race
++You are uncommonly nimble for your race. You gain the following benefits:
++Increase your Strength or Dexterity score by 1, to a maximum of 20.
++your walking speed by 5 feet.
++You gain proficiency in the Acrobatics or Athletics skill (your choice).
++You have advantage on any Strength (Athletics) or Dexterity (Acrobatics) check you make to escape from being grappled.
+** 
+
 * equipment
 ** crossbow, light, 20 bolts
-*** or
++ 
+*** or 
 ** simple weapon
 ** component pouch
 *** or
@@ -77,7 +99,15 @@
 ** scholar's pack
 *** or
 ** dungeoneer's pack
-** leather armor 
+** leather armor
+*** ac
+**** 11 + dex mod
+*** weight
+**** 10 lb
+*** cost
+**** 10 gp
+*** don/doff
+**** 1 min
 ** simple weapon
 ** two daggers
 * spells
@@ -87,8 +117,8 @@
    + Range: 120 feet
    + Components: V, S
    + Duration: Instantaneous
-   +A beam of crackling energy streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 force damage.
-   +At Higher Levels. The spell creates more than one beam when you reach higher levels: two beams at 5th level, three beams at 11th level, and four beams at 17th level. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam.
+   + A beam of crackling energy streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 force damage.
+   + At Higher Levels. The spell creates more than one beam when you reach higher levels: two beams at 5th level, three beams at 11th level, and four beams at 17th level. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam.
 2. 
 3. 
 4. 
@@ -181,8 +211,7 @@
 *** 20th
 **** spend 1 minute entreating patron to regen pact magic spell slot
 **** long rest
-
-pact of the tome
+** pact of the tome
 
 * additional info
 ** Grovel, Cower, and Beg
@@ -192,9 +221,12 @@ pact of the tome
 ** Sunlight Sensitivity
 *** You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight.
 
+* markdown ref
 
+#+BEGIN_COMMENT
 To markup text in Org, simply surround it with one or more marker characters.
 *Bold*, /italic/ and _underline_ are fairly intuitive, and the ability to use
 +strikethrough+ is a plus.  You can _/*combine*/_ the basic markup in any
 order, however ~code~ and =verbatim= need to be the *_~inner-most~_* markers
 if they are present since their contents are interpreted =_literally_=.
+#+END_COMMENT
