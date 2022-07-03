@@ -1,20 +1,23 @@
 #+title: D&D 20th level kobold run
 * current
 ** hp
-*** current ::
-*** temp ::
+*** max 117
+*** current :: 117
+*** temp :: 0
 ** ac
-*** 
+*** 13
 ** init
-** speed:30
+** speed:30 + 5
 ** money
 | type | roll type |   rolls | sum | worth |
 |------+-----------+---------+-----+-------|
 | pp   |           |         |     | 10    |
-| gp   |    4d4x10 | 1+1+3+4 |  90 | 1     |
+| gp   |    4d4x10 | 1+1+3+4 | 105 | 1     |
 | ep   |           |         |     | 1/2   |
 | sp   |           |         |     | 1/10  |
 | cp   |           |         |     | 1/100 |
+** passive per
+*** 
 * info
 ** name
 *** *Name*
@@ -34,13 +37,25 @@
 *** common
 *** draconic
 ** background
-*** 
+*** criminal
+**** skill proficiencies
+***** deception
+***** stealth
+**** tool proficiencies
+***** gaming set
+***** thieves' tools
+**** equipment
+***** crowbar
+***** dark common clothes + hood
+***** 15 gp
 ** alignment
-*** 
+*** neutral
 ** age
 *** 30
 ** height
 *** 3
+** size
+*** small
 ** weight
 *** 30
 ** eyes
@@ -52,31 +67,23 @@
 ** xp
 *** 355,000
 ** speed
-*** 30 + 5
-** hit dice
-***  20d8
+*** 30 + 5 (feat) 35
 ** hp
-***  1d8 (or 5) + con mod / warlock level after 1st
-** proficiencies
-*** light armor
-*** simple weapons
-*** saving throws
-**** wis
-**** cha
-*** skills:
-**** arcana
-**** deception
-**** history
-**** intimidation
-**** investigation
-**** nature,
-**** religion
+*** 1d8 (or 5) + con mod / warlock level after 1st
+*** 117
 * personality
-** traits 
+** criminal specialty
+*** burglar
+*** criminal contact
+**** You have a reliable and trustworthy contact who acts as your liaison to a network of other criminals. You know how to get messages to and from your contact, even over great distances; specifically, you know the local messengers, corrupt caravan masters, and seedy sailors who can deliver messages for you.
+** traits
+*** I am always calm, no matter what the situation. I never raise my voice or let my emotions control me.
 ** ideals
+*** People. I'm loyal to my friends, not to any ideals, and everyone else can take a trip down the Styx for all I care. 
 ** bonds
+*** Something important was taken from me, and I aim to steal it back.
 ** flaws
-*** prone to stealing
+*** When I see something valuable, I can't think about anything but how to steal it.
 * feats
 ** racial
 *** squat nimbleness
@@ -86,30 +93,42 @@
 +your walking speed by 5 feet.
 +You gain proficiency in the Acrobatics or Athletics skill (your choice).
 +You have advantage on any Strength (Athletics) or Dexterity (Acrobatics) check you make to escape from being grappled.
-** 
-
+** fey touched
+-Your exposure to the Feywild's magic has changed you, granting you the following benefits:
+-Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
+-You learn the Misty Step spell and one 1st-level spell of your choice. The 1st-level spell must be from the Divination or Enchantment school of magic. You can cast each of these spells without expending a spell slot. Once you cast either of these spells in this way, you can’t cast that spell in this way again until you finish a long rest. You can also cast these spells using spell slots you have of the appropriate level. The spells’ spellcasting ability is the ability increased by this feat.
+** shadow touched
+- Your exposure to the Shadowfell's magic has changed you, granting you the following benefits:
+- Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
+- You learn the Invisibility spell and one 1st-level spell of your choice. The 1st-level spell must be from the Illusion or Necromancy school of magic. You can cast each of these spells without expending a spell slot. Once you cast either of these spells in this way, you can't cast that spell in this way again until you finish a long rest. You can also cast these spells using spell slots you have of the appropriate level. The spells' spellcasting ability is the ability increased by this feat.
+ 
 * equipment
-** crossbow, light, 20 bolts
-+ 
-*** or 
-** simple weapon
-** component pouch
-*** or
-** arcane focus
-** scholar's pack
-*** or
+** weapons
+- crossbow, light, 20 bolts
+- simple weapon
+- two daggers
+** items
+- component pouch
 ** dungeoneer's pack
-** leather armor
-*** ac
-**** 11 + dex mod
-*** weight
-**** 10 lb
-*** cost
-**** 10 gp
-*** don/doff
-**** 1 min
-** simple weapon
-** two daggers
+- backpack
+- crowbar
+- hammer
+- 10 pitons
+- 10 torches
+- tinderbox
+- 10 rations
+- waterskin
+- hempen rope, 50 ft
+** armor
+*** leather armor
+**** ac
+***** 11 + dex mod (2)
+**** weight
+***** 10 lb
+**** cost
+***** 10 gp
+**** don/doff
+***** 1 min
 * spells
 ** cantrips
 1. eldritch blast  
@@ -122,11 +141,16 @@
 2. 
 3. 
 4. 
+
+** non-slot 
+1.  
+2. 
+3. 
 ** spell slots
 1. 
 2. 
 3. 
-4. 
+   1. 
 ** spells known
 1. cone of cold
    + Casting Time: 1 action
@@ -135,7 +159,19 @@
    + Duration: Instantaneous
    + A blast of cold air erupts from your hands. Each creature in a 60-foot cone must make a Constitution saving throw. A creature takes 8d8 cold damage on a failed save, or half as much damage on a successful one. A creature killed by this spell becomes a frozen statue until it thaws.
    + At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th.    
-2. 
+2. bigby's hand
+   + Casting Time: 1 action
+   + Range: 120 feet
+   + Components: V, S, M (an eggshell and a snakeskin glove)
+   + Duration: Concentration, up to 1 minute
+   + You create a Large hand of shimmering, translucent force in an unoccupied space that you can see within range. The hand lasts for the spell’s duration, and it moves at your command, mimicking the movements of your own hand.
+   + The hand is an object that has AC 20 and hit points equal to your hit point maximum. If it drops to 0 hit points, the spell ends. It has a Strength of 26 (+8) and a Dexterity of 10 (+0). The hand doesn’t fill its space.
+   + When you cast the spell and as a bonus action on your subsequent turns, you can move the hand up to 60 feet and then cause one of the following effects with it.
+   + Clenched Fist. The hand strikes one creature or object within 5 feet of it. Make a melee spell attack for the hand using your game statistics. On a hit, the target takes 4d8 force damage.
+   + Forceful Hand. The hand attempts to push a creature within 5 feet of it in a direction you choose. Make a check with the hand’s Strength contested by the Strength (Athletics) check of the target. If the target is Medium or smaller, you have advantage on the check. If you succeed, the hand pushes the target up to 5 feet plus a number of feet equal to five times your spellcasting ability modifier. The hand moves with the target to remain within 5 feet of it.
+   + Grasping Hand. The hand attempts to grapple a Huge or smaller creature within 5 feet of it. You use the hand’s Strength score to resolve the grapple. If the target is Medium or smaller, you have advantage on the check. While the hand is grappling the target, you can use a bonus action to have the hand crush it. When you do so, the target takes bludgeoning damage equal to 2d6 + your spellcasting ability modifier.
+   + Interposing Hand. The hand interposes itself between you and a creature you choose until you give the hand a different command. The hand moves to stay between you and the target, providing you with half cover against the target. The target can’t move through the hand’s space if its Strength score is less than or equal to the hand’s Strength score. If its Strength score is higher than the hand’s Strength score, the target can move toward you through the hand’s space, but that space is difficult terrain for the target.
+   + At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the damage from the clenched fist option increases by 2d8 and the damage from the grasping hand increases by 2d6 for each slot level above 5th.
 3. 
 4. 
 5. 
@@ -150,39 +186,62 @@
 14. 
 15. 
 ** invocations
-1. 
+1. Gift of the Protectors
+   +Prerequisite: 9th level, Pact of the Tome feature
+   +A new page appears in your Book of Shadows. With your permission, a creature can use its action to write its name on that page, which can contain a number of names equal to your proficiency bonus.
+   +When any creature whose name is on the page is reduced to 0 hit points but not killed outright, the creature magically drops to 1 hit point instead. Once this magic is triggered, no creature can benefit from it until you finish a long rest.
+   +As an action, you can magically erase a name on the page by touching it.
 2. 
 3. 
 4. 
 5. 
 6. 
 7. 
-8. 
-* patron
-** celestial?
+8.
+** mystic arcanum
+*** 6th
+-
+*** 7th
+-
+*** 8th
+-
+*** 9th
+- 
 * base abilities
 ** str 13
 *** +1
-** dex 12 +2 14
-*** +1
+** dex 12 +2 (kobold) +1 (squat nimbleness) 15
+*** +2
 ** con 14
 *** +2
 ** int 7 or 12
 *** -2 or +1
 ** wis 13
 *** +1
-** *cha* 16
-*** +3
-* raw
-** 1+3+4+5 = 12 dex
-** 3+3+4+6 = 13 wis
-** 1+5+5+6 = 16 cha
-** 1+4+4+6 = 14 con
-** 1+1+1+5 = 7 int
-** reroll:
-** 2+3+3+6 = 12 int?
-** 2+2+3+5 = 13 str
-
+** *cha* 16 + 2 + 1 + 1 = 20
+*** +5
+*** 4th asi
+*** 8th fey touch
+*** 12th shadow touch
+* patron
+** fathomless
+*** tentacle of the deep
+-At 1st level, you can magically summon a spectral tentacle that strikes at your foes. As a bonus action, you create a 10-foot-long tentacle at a point you can see within 60 feet of you. The tentacle lasts for 1 minute or until you use this feature to create another tentacle.
+-When you create the tentacle, you can make a melee spell attack against one creature within 10 feet of it. On a hit, the target takes 1d8 cold damage, and its speed is reduced by 10 feet until the start of your next turn. When you reach 10th level in this class, the damage increases to 2d8.
+-As a bonus action on your turn, you can move the tentacle up to 30 feet and repeat the attack .
+-You can summon the tentacle a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
+*** gift of the sea
+-Also at 1st level, you gain a swimming speed of 40 feet, and you can breathe underwater.
+*** oceanic soul
+-At 6th level, you are now even more at home in the depths. You gain resistance to cold damage. In addition, when you are fully submerged, any creature that is also fully submerged can understand your speech, and you can understand theirs
+*** guardian coil
+-At 6th level, your Tentacle of the Deeps can defend you and others, interposing itself between them and harm. When you or a creature you can see takes damage while within 10 feet of the tentacle, you can use your reaction to choose one of those creatures and reduce the damage to that creature by 1d8. When you reach 10th level in this class, the damage reduced by the tentacle increases to 2d8.
+*** grasping tentacles
+-Starting at 10th level, you learn the spell Evard's Black Tentacles. It counts as a warlock spell for you, but it doesn't count against the number of spells you know. You can also cast it once without using a spell slot, and you regain the ability to do so when you finish a long rest.
+-Whenever you cast this spell, your patron's magic bolsters you, granting you a number of temporary hit points equal to your warlock level. Moreover, damage can't break your concentration on this spell.
+*** fathomless plunge
+-When you reach 14th level, you can magically open temporary conduits to watery destinations. As an action, you can teleport yourself and up to five other willing creatures that you can see within 30 feet of you. Amid a whirl of tentacles, you all vanish and then reappear up to 1 mile away in a body of water you've seen (pond size or larger) or within 30 feet of it, each of you appearing in an unoccupied space within 30 feet of the others.
+-Once you use this feature, you can't use it again until you finish a short or long rest.
 * saving throws
 
 * skills
@@ -190,6 +249,19 @@
 
 * level bonuses
 ** ability score improvement: 4,8,12,16,19: 1 ablility +2 or 2 ability +1, cap 20
+*** 4th +2 CHA
+** feats, replace asi, same requirements
+*** 8th fey touched
+-Your exposure to the Feywild's magic has changed you, granting you the following benefits:
+-Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
+-You learn the Misty Step spell and one 1st-level spell of your choice. The 1st-level spell must be from the Divination or Enchantment school of magic. You can cast each of these spells without expending a spell slot. Once you cast either of these spells in this way, you can’t cast that spell in this way again until you finish a long rest. You can also cast these spells using spell slots you have of the appropriate level. The spells’ spellcasting ability is the ability increased by this feat.
+
+*** 12th shadow touched
+- Your exposure to the Shadowfell's magic has changed you, granting you the following benefits:
+- Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
+- You learn the Invisibility spell and one 1st-level spell of your choice. The 1st-level spell must be from the Illusion or Necromancy school of magic. You can cast each of these spells without expending a spell slot. Once you cast either of these spells in this way, you can't cast that spell in this way again until you finish a long rest. You can also cast these spells using spell slots you have of the appropriate level. The spells' spellcasting ability is the ability increased by this feat.
+ 
+
 ** mystic arcanum
 *** 11th 
 **** 6th level warlock spell
@@ -215,12 +287,49 @@
 
 * additional info
 ** Grovel, Cower, and Beg
-***  As an action on your turn, you can cower pathetically to distract nearby foes. Until the end of your next turn, your allies gain advantage on attack rolls against enemies within 10 feet of you that can see you. Once you use this trait, you can't use it again until you finish a short or long rest.
+*** As an action on your turn, you can cower pathetically to distract nearby foes. Until the end of your next turn, your allies gain advantage on attack rolls against enemies within 10 feet of you that can see you. Once you use this trait, you can't use it again until you finish a short or long rest.
 ** Pack Tactics
 *** You have advantage on an attack roll against a creature if at least one of your allies is within 5 feet of the creature and the ally isn't incapacitated.
 ** Sunlight Sensitivity
 *** You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight.
+** Magic Theme
+*** brine-scented shapes of sharks, jellyfish, octopi, and other sea creatures
+* datum
+** raw
+*** 1+3+4+5 = 12 dex
+*** 3+3+4+6 = 13 wis
+*** 1+5+5+6 = 16 cha
+*** 1+4+4+6 = 14 con
+*** 1+1+1+5 = 7 int
+*** reroll:
+*** 2+3+3+6 = 12 int?
+*** 2+2+3+5 = 13 str
+** hit dice
+***  20d8
 
+** hit dice raw
+*** base 8 + 3+1+2+3+3+7+2+8+4+3+2+5+7+3+4+1+3+1+2+5
+*** sum 77 + con mod (40?)
+*** total 117
+*** proficiencies
+**** light armor
+**** simple weapons
+**** saving throws
+***** wis
+***** cha
+**** skills 2
+***** deception
+***** history
+***** intimidation
+***** investigation
+***** nature
+***** religion
+**** dice set
+**** thieves' tools
+***** deception
+***** stealth
+*** passive perception
+*** 
 * markdown ref
 
 #+BEGIN_COMMENT
