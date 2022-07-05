@@ -8,4 +8,8 @@ mine sus, spooks and kills
 |     1 | walking corpse            |      2 |
 |     2 | tiger                     |      1 |
 |     3 | dangerous thing (alkilth) |      1 |
-|       |                           |        |
+|     4 | dwarves                   |     40 |
+|     5 | sabretooth tiger          |      3 |
+|     6 | stone giant               |      2 |
+|     7 | skeeter                   |     14 |
+|     8 | duegar                    |     14 |

@@ -2,7 +2,7 @@
 * current
 ** hp
 *** max 156 [recalc]
-*** current :: 90
+*** current :: 156
 *** temp :: 0
 ** ac
 *** 15
@@ -104,7 +104,6 @@
 - Your exposure to the Shadowfell's magic has changed you, granting you the following benefits:
 - Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
 - You learn the Invisibility spell and one 1st-level spell of your choice. The 1st-level spell must be from the Illusion or Necromancy school of magic. You can cast each of these spells without expending a spell slot. Once you cast either of these spells in this way, you can't cast that spell in this way again until you finish a long rest. You can also cast these spells using spell slots you have of the appropriate level. The spells' spellcasting ability is the ability increased by this feat.
-
 ** tough
 *** Your hit point maximum increases by an amount equal to twice your level when you gain this feat. Whenever you gain a level thereafter, your hit point maximum increases by an additional 2 hit points
 ** metamagic adept
@@ -142,11 +141,10 @@
 - periapt of wound closure
   - Wondrous item, uncommon (requires attunement)
   - While you wear this pendant, you stabilize whenever you are dying at the start of your turn. In addition, whenever you roll a Hit Die to regain hit points, double the number of hit points it restores.
-
 *** rare 2
 - amulet of health
-  - Your Constitution score is 19 while you wear this amulet. It has no effect on you if your Constitution is 19 or higher without it.
-- daern's instant fortress
+ - Your Constitution score is 19 while you wear this amulet. It has no effect on you if your Constitution is 19 or higher without it.
+- [x] daern's instant fortress
  - You can use an action to place this 1-inch metal cube on the ground and speak its command word. The cube rapidly grows into a fortress that remains until you use an action to speak the command word that dismisses it, which works only if the fortress is empty.
  - The fortress is a square tower, 20 feet on a side and 30 feet high, with arrow slits on all sides and a battlement atop it. Its interior is divided into two floors, with a ladder running along one wall to connect them. The ladder ends at a trapdoor leading to the roof. When activated, the tower has a small door on the side facing you. The door opens only at your command, which you can speak as a bonus action. It is immune to the Knock spell and similar magic, such as that of a Chime of Opening.
  - Each creature in the area where the fortress appears must make a DC 15 Dexterity saving throw, taking 10d10 bludgeoning damage on a failed save, or half as much damage on a successful one. In either case, the creature is pushed to an unoccupied space outside but next to the fortress. Objects in the area that aren't being worn or carried take this damage and are pushed automatically.
@@ -232,7 +230,7 @@
    + Lightning springs from your hand to deliver a shock to a creature you try to touch. Make a melee spell attack against the target. You have advantage on the attack roll if the target is wearing armor made of metal. On a hit, the target takes 1d8 lightning damage, and it can’t take reactions until the start of its next turn.
    + At Higher Levels. The spell’s damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).
 ** spell slots
-1. [x] 
+1. [ ] 
 2. [ ] 
 3. [ ] 
 4. [ ] 
@@ -421,7 +419,6 @@
    - Duration: Instantaneous
    - Briefly surrounded by silvery mist, you teleport up to 30 feet to an unoccupied space that you can see.
    - once per long rest
- 
 ** invocations
 1. Gift of the Protectors
    + Prerequisite: 9th level, Pact of the Tome feature
@@ -510,26 +507,25 @@
 * patron
 ** fathomless
 *** tentacle of the deep
--At 1st level, you can magically summon a spectral tentacle that strikes at your foes. As a bonus action, you create a 10-foot-long tentacle at a point you can see within 60 feet of you. The tentacle lasts for 1 minute or until you use this feature to create another tentacle.
--When you create the tentacle, you can make a melee spell attack against one creature within 10 feet of it. On a hit, the target takes 1d8 cold damage, and its speed is reduced by 10 feet until the start of your next turn. When you reach 10th level in this class, the damage increases to 2d8.
--As a bonus action on your turn, you can move the tentacle up to 30 feet and repeat the attack .
--You can summon the tentacle a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
+- At 1st level, you can magically summon a spectral tentacle that strikes at your foes. As a bonus action, you create a 10-foot-long tentacle at a point you can see within 60 feet of you. The tentacle lasts for 1 minute or until you use this feature to create another tentacle.
+- When you create the tentacle, you can make a melee spell attack against one creature within 10 feet of it. On a hit, the target takes 1d8 cold damage, and its speed is reduced by 10 feet until the start of your next turn. When you reach 10th level in this class, the damage increases to 2d8.
+- As a bonus action on your turn, you can move the tentacle up to 30 feet and repeat the attack .
+- You can summon the tentacle a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
 *** gift of the sea
 -Also at 1st level, you gain a swimming speed of 40 feet, and you can breathe underwater.
 *** oceanic soul
 -At 6th level, you are now even more at home in the depths. You gain resistance to cold damage. In addition, when you are fully submerged, any creature that is also fully submerged can understand your speech, and you can understand theirs
 *** guardian coil
--At 6th level, your Tentacle of the Deeps can defend you and others, interposing itself between them and harm. When you or a creature you can see takes damage while within 10 feet of the tentacle, you can use your reaction to choose one of those creatures and reduce the damage to that creature by 1d8. When you reach 10th level in this class, the damage reduced by the tentacle increases to 2d8.
+- At 6th level, your Tentacle of the Deeps can defend you and others, interposing itself between them and harm. When you or a creature you can see takes damage while within 10 feet of the tentacle, you can use your reaction to choose one of those creatures and reduce the damage to that creature by 1d8. When you reach 10th level in this class, the damage reduced by the tentacle increases to 2d8.
 *** grasping tentacles
--Starting at 10th level, you learn the spell Evard's Black Tentacles. It counts as a warlock spell for you, but it doesn't count against the number of spells you know. You can also cast it once without using a spell slot, and you regain the ability to do so when you finish a long rest.
--Whenever you cast this spell, your patron's magic bolsters you, granting you a number of temporary hit points equal to your warlock level. Moreover, damage can't break your concentration on this spell.
+- Starting at 10th level, you learn the spell Evard's Black Tentacles. It counts as a warlock spell for you, but it doesn't count against the number of spells you know. You can also cast it once without using a spell slot, and you regain the ability to do so when you finish a long rest.
+- Whenever you cast this spell, your patron's magic bolsters you, granting you a number of temporary hit points equal to your warlock level. Moreover, damage can't break your concentration on this spell.
 *** fathomless plunge
--When you reach 14th level, you can magically open temporary conduits to watery destinations. As an action, you can teleport yourself and up to five other willing creatures that you can see within 30 feet of you. Amid a whirl of tentacles, you all vanish and then reappear up to 1 mile away in a body of water you've seen (pond size or larger) or within 30 feet of it, each of you appearing in an unoccupied space within 30 feet of the others.
--Once you use this feature, you can't use it again until you finish a short or long rest.
+- When you reach 14th level, you can magically open temporary conduits to watery destinations. As an action, you can teleport yourself and up to five other willing creatures that you can see within 30 feet of you. Amid a whirl of tentacles, you all vanish and then reappear up to 1 mile away in a body of water you've seen (pond size or larger) or within 30 feet of it, each of you appearing in an unoccupied space within 30 feet of the others.
+- Once you use this feature, you can't use it again until you finish a short or long rest.
 * saving throws
 * skills
 ** deception
-
 * level bonuses
 ** ability score improvement
 *** : 4,8,12,16,19: 1 ablility +2 or 2 ability +1, cap 20
@@ -537,9 +533,9 @@
 ** feats
 *** replace asi, same requirements
 **** 8th fey touched
--Your exposure to the Feywild's magic has changed you, granting you the following benefits:
--Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
--You learn the Misty Step spell and one 1st-level spell of your choice. The 1st-level spell must be from the Divination or Enchantment school of magic. You can cast each of these spells without expending a spell slot. Once you cast either of these spells in this way, you can’t cast that spell in this way again until you finish a long rest. You can also cast these spells using spell slots you have of the appropriate level. The spells’ spellcasting ability is the ability increased by this feat.
+- Your exposure to the Feywild's magic has changed you, granting you the following benefits:
+- Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
+- You learn the Misty Step spell and one 1st-level spell of your choice. The 1st-level spell must be from the Divination or Enchantment school of magic. You can cast each of these spells without expending a spell slot. Once you cast either of these spells in this way, you can’t cast that spell in this way again until you finish a long rest. You can also cast these spells using spell slots you have of the appropriate level. The spells’ spellcasting ability is the ability increased by this feat.
 **** 12th shadow touched
 - Your exposure to the Shadowfell's magic has changed you, granting you the following benefits:
 - Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
@@ -573,7 +569,6 @@
 ** pact of the tome
 - Your patron gives you a grimoire called a Book of Shadows. When you gain this feature, choose three cantrips from any class's spell list (the three needn't be from the same list). While the book is on your person, you can cast those cantrips at will. They don't count against your number of cantrips known. If they don't appear on the warlock spell list, they are nonetheless warlock spells for you.
 - If you lose your Book of Shadows, you can perform a 1-hour ceremony to receive a replacement from your patron. This ceremony can be performed during a short or long rest, and it destroys the previous book. The book turns to ash when you die.
-
 * additional info
 ** Grovel, Cower, and Beg
 *** As an action on your turn, you can cower pathetically to distract nearby foes. Until the end of your next turn, your allies gain advantage on attack rolls against enemies within 10 feet of you that can see you. Once you use this trait, you can't use it again until you finish a short or long rest.
