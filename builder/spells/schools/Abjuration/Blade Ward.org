@@ -1,5 +1,7 @@
 #+content showstars indent
-#+FILETAGS: spell 
+#+FILETAGS: :spell:
+#+title:Blade Ward
+
 * Blade Ward               :bard:sorcerer:warlock:wizard:
 ** Abjuration :abj:
 ** 0th level :can:
