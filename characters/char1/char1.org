@@ -1,4 +1,5 @@
 #+title: D&D 20th level kobold run
+#+FILETAGS: dnd charsheet ligma
 * current
 ** hp
 *** max 156 [recalc]
@@ -144,12 +145,13 @@
   - While you wear this pendant, you stabilize whenever you are dying at the start of your turn. In addition, whenever you roll a Hit Die to regain hit points, double the number of hit points it restores.
 *** rare 2
 - amulet of health
- - Your Constitution score is 19 while you wear this amulet. It has no effect on you if your Constitution is 19 or higher without it.
+  - Your Constitution score is 19 while you wear this amulet. It has no effect on you if your Constitution is 19 or higher without it.
 - [x] daern's instant fortress
- - You can use an action to place this 1-inch metal cube on the ground and speak its command word. The cube rapidly grows into a fortress that remains until you use an action to speak the command word that dismisses it, which works only if the fortress is empty.
- - The fortress is a square tower, 20 feet on a side and 30 feet high, with arrow slits on all sides and a battlement atop it. Its interior is divided into two floors, with a ladder running along one wall to connect them. The ladder ends at a trapdoor leading to the roof. When activated, the tower has a small door on the side facing you. The door opens only at your command, which you can speak as a bonus action. It is immune to the Knock spell and similar magic, such as that of a Chime of Opening.
- - Each creature in the area where the fortress appears must make a DC 15 Dexterity saving throw, taking 10d10 bludgeoning damage on a failed save, or half as much damage on a successful one. In either case, the creature is pushed to an unoccupied space outside but next to the fortress. Objects in the area that aren't being worn or carried take this damage and are pushed automatically.
- - The tower is made of adamantine, and its magic prevents it from being tipped over. The roof, the door, and the walls each have 100 hit points, immunity to damage from nonmagical weapons excluding siege weapons, and resistance to all other damage. Only a Wish spell can repair the fortress (this use of the spell counts as replicating a spell of 8th level or lower). Each casting of wish causes the roof, the door, or one wall to regain 50 hit points.
+  - N(0)E(0)S(0)W(24) Door(0) Roof(0)
+  - You can use an action to place this 1-inch metal cube on the ground and speak its command word. The cube rapidly grows into a fortress that remains until you use an action to speak the command word that dismisses it, which works only if the fortress is empty.
+  - The fortress is a square tower, 20 feet on a side and 30 feet high, with arrow slits on all sides and a battlement atop it. Its interior is divided into two floors, with a ladder running along one wall to connect them. The ladder ends at a trapdoor leading to the roof. When activated, the tower has a small door on the side facing you. The door opens only at your command, which you can speak as a bonus action. It is immune to the Knock spell and similar magic, such as that of a Chime of Opening.
+  - Each creature in the area where the fortress appears must make a DC 15 Dexterity saving throw, taking 10d10 bludgeoning damage on a failed save, or half as much damage on a successful one. In either case, the creature is pushed to an unoccupied space outside but next to the fortress. Objects in the area that aren't being worn or carried take this damage and are pushed automatically.
+  - The tower is made of adamantine, and its magic prevents it from being tipped over. The roof, the door, and the walls each have 100 hit points, immunity to damage from nonmagical weapons excluding siege weapons, and resistance to all other damage. Only a Wish spell can repair the fortress (this use of the spell counts as replicating a spell of 8th level or lower). Each casting of wish causes the roof, the door, or one wall to regain 50 hit points.
 *** very rare 1
 - illusionist's bracers
  - A powerful illusionist of House Dimir originally developed these bracers. which enabled her to create multiple minor illusions at once. The bracers' power, though, extends far beyond illusions.
@@ -505,7 +507,7 @@
 *** 4th asi
 *** 8th fey touch
 *** 12th shadow touch
-* 
+** Table 
 #+name: stats
 | Ability | Score | Mod | PB | Roll      | Skill           |
 |---------+-------+-----+----+-----------+-----------------|
@@ -542,7 +544,6 @@
 | PROF    |     2 |     |    |           |                 |
 
 #+TBLFM: @2$3='(calc-dnd-mod (string-to-number (org-table-get-constant $1)))
-
 
 * patron
 ** fathomless
