@@ -1,0 +1,695 @@
+#+title: D&D 12th level fairy run
+#+description: D&D 12th level fairy run
+
+* current
+** hp
+*** max __
+*** current :: __
+*** temp :: 0
+** ac
+***
+** init
+***
+** speed
+*** 30
+** Money
+| Copper | Silver | Electrum | Gold | Platinum | Total (gp) |
+|--------+--------+----------+------+----------+------------|
+|      0 |      0 |        0 | 7250 |        0 |       7250 |
+#+TBLFM: $6=(($1/100) + ($2 /10) + ($3 /2) + $4 + ($5 *10 ))
+
+** passive per
+*** 10
+
+* Stats
+  | Walking Speed | Flying speed | Climbing Speed | Hit Points | AC | Death Saves | Inspiration |
+  |---------------+--------------+----------------+------------+----+-------------+-------------|
+  |            35 |           35 |             25 | 12/12      | 17 |             |             |
+
+* Constants
+  #+NAME: define-constants-with-src-block
+  #+BEGIN_SRC elisp :var table=stats :colnames yes :results output drawer :cache yes :lang elisp
+    (dnd-output-ability-constants table)
+    #+END_SRC
+
+    #+RESULTS[187c28aa62b507cbce01303c5f1c257156d1334d]: define-constants-with-src-block
+    :results:
+    #+CONSTANTS: STR=9
+    #+CONSTANTS: DEX=15
+    #+CONSTANTS: CON=19
+    #+CONSTANTS: INT=11
+    #+CONSTANTS: WIS=11
+    #+CONSTANTS: CHA=16
+    #+CONSTANTS: PROF=2
+    :end:
+
+* Traits
+  | Level | Race  | Subrace | Class    | Subclass      | Age | Alignment    | Size        |
+  |-------+-------+---------+----------+---------------+-----+--------------+-------------|
+  |    12 | Fairy |         | Sorcerer | Abberant Mind |  30 | Chaotic Good | Small (3ft) |
+
+* Abilities and Skills
+  #+name: stats
+  | Ability | Score | Mod | PB | Roll      | Skill           |
+  |---------+-------+-----+----+-----------+-----------------|
+  | STR     |     9 |  -1 |    | 1d20 + -1 | Saving Throw    |
+  |         |       |     |    | 1d20 + -1 | Athletics       |
+  |---------+-------+-----+----+-----------+-----------------|
+  | DEX     |    15 |   2 |    | 1d20 + 2  | Saving Throw    |
+  |         |       |     |    | 1d20 + 2  | Acrobatics      |
+  |         |       |     |    | 1d20 + 2  | Sleight of Hand |
+  |         |       |     |    | 1d20 + 2  | Stealth         |
+  |---------+-------+-----+----+-----------+-----------------|
+  | CON     |    19 |   4 |    | 1d20 + 4  | Saving Throw    |
+  |---------+-------+-----+----+-----------+-----------------|
+  | INT     |    11 |   0 |    | 1d20 + 0  | Saving Throw    |
+  |         |       |     |    | 1d20 + 0  | Arcana          |
+  |         |       |     |    | 1d20 + 0  | History         |
+  |         |       |     |    | 1d20 + 0  | Investigation   |
+  |         |       |     |    | 1d20 + 0  | Nature          |
+  |         |       |     |    | 1d20 + 0  | Religion        |
+  |---------+-------+-----+----+-----------+-----------------|
+  | WIS     |    11 |   0 |    | 1d20 + 0  | Saving Throw    |
+  |         |       |     |    | 1d20 + 0  | Animal Handling |
+  |         |       |     |    | 1d20 + 0  | Insight         |
+  |         |       |     |    | 1d20 + 0  | Medicine        |
+  |         |       |     |    | 1d20 + 0  | Perception      |
+  |         |       |     |    | 1d20 + 0  | Survival        |
+  |---------+-------+-----+----+-----------+-----------------|
+  | CHA     |    16 |   3 |    | 1d20 + 3  | Saving Throw    |
+  |         |       |     |    | 1d20 + 3  | Deception       |
+  |         |       |     |    | 1d20 + 3  | Intimidation    |
+  |         |       |     |    | 1d20 + 3  | Performance     |
+  |         |       |     |    | 1d20 + 3  | Persuasion      |
+  |---------+-------+-----+----+-----------+-----------------|
+  | PROF    |     2 |     |    |           |                 |
+  #+TBLFM: @2$3='(calc-dnd-mod (string-to-number (org-table-get-constant $1)))
+  #+TBLFM: @4$3='(calc-dnd-mod (string-to-number (org-table-get-constant $1)))
+  #+TBLFM: @8$3='(calc-dnd-mod (string-to-number (org-table-get-constant $1)))
+  #+TBLFM: @9$3='(calc-dnd-mod (string-to-number (org-table-get-constant $1)))
+  #+TBLFM: @15$3='(calc-dnd-mod (string-to-number (org-table-get-constant $1)))
+  #+TBLFM: @21$3='(calc-dnd-mod (string-to-number (org-table-get-constant $1)))
+  #+TBLFM: @2$5..@3$5='(concat "1d20 + " (number-to-string (+ (calc-dnd-pb $PROF $4) (calc-dnd-mod (string-to-number (org-table-get-constant @2$1))))))
+  #+TBLFM: @4$5..@7$5='(concat "1d20 + " (number-to-string (+ (calc-dnd-pb $PROF $4) (calc-dnd-mod (string-to-number (org-table-get-constant @4$1))))))
+  #+TBLFM: @8$5..@8$5='(concat "1d20 + " (number-to-string (+ (calc-dnd-pb $PROF $4) (calc-dnd-mod (string-to-number (org-table-get-constant @8$1))))))
+  #+TBLFM: @9$5..@14$5='(concat "1d20 + " (number-to-string (+ (calc-dnd-pb $PROF $4) (calc-dnd-mod (string-to-number (org-table-get-constant @9$1))))))
+  #+TBLFM: @15$5..@20$5='(concat "1d20 + " (number-to-string (+ (calc-dnd-pb $PROF $4) (calc-dnd-mod (string-to-number (org-table-get-constant @15$1))))))
+  #+TBLFM: @21$5..@25$5='(concat "1d20 + " (number-to-string (+ (calc-dnd-pb $PROF $4) (calc-dnd-mod (string-to-number (org-table-get-constant @21$1))))))
+
+* Attacks
+  #+NAME: attacks
+  | Weapon     | Ability | PB | Type     | Die | Mod To Hit | Roll     |
+  |------------+---------+----+----------+-----+------------+----------|
+  | Longbow    | DEX     |    | Piercing | 1d8 |          2 | 1d8 + 2  |
+  | Shortsword | STR     |    | Piercing | 1d6 |         -1 | 1d6 + -1 |
+  | Shortsword | DEX     |    | Piercing | 1d6 |          2 | 1d6 + 2  |
+  #+TBLFM: $6='(+ (calc-dnd-pb $PROF $3) (calc-dnd-mod (string-to-number (org-table-get-constant $2))))
+  #+TBLFM: $7='(concat $5 " + " (number-to-string (calc-dnd-mod (string-to-number (org-table-get-constant $2)))))
+
+* Proficiencies
+  | Languages | Tools          | Armor   | Weapons |
+  |-----------+----------------+---------+---------|
+  | Common    | Thieves' Tools | Light   | Simple  |
+  | Grung     | Flute          | Medium  | Martial |
+  |           |                | Shields |         |
+
+* info
+** name
+*** **
+** class
+*** sorcerer
+** level
+*** 12
+** race
+*** fairy
+** racial bonuses
+*** +2 1 AS, +1 to 1 AS
+*** +squat nimbleness
+*** +
+*** +
+*** -
+** languages
+*** common
+*** 1 other
+** background
+*** urban bounty hunter
+**** skill proficiencies
+***** deception
+***** stealth
+**** tool proficiencies
+***** gaming set
+***** thieves' tools
+**** equipment
+***** crowbar
+***** robes
+***** 20 gp
+** alignment
+*** chaotic good
+** age
+*** 30
+** height
+*** 3
+** size
+*** small
+** weight
+*** 30
+** eyes
+*** green
+** skin
+*** yes
+** hair 
+*** yes
+** xp
+*** somenum
+** speed
+*** 30 + 5 (S.N) 35
+** hp
+*** 1d6 (or 5) + con mod / sorc level after 1st
+*** 96?
+* personality
+** urban bounty hunter
+*** ear to the ground
+**** You are in frequent contact with people in the segment of society that your chosen quarries move through. These people might be associated with the criminal underworld, the rough-and-tumble folk of the streets, or members of high society. This connection comes in the form of a contact in any city you visit, a person who provides information about the people and places of the local area.
+** traits
+*** I would rather make a new friend than a new enemy.
+** ideals
+*** Redemption. There's a spark of good in everyone. (Good)
+** bonds
+*** I'm guilty of a terrible crime. I hope I can redeem myself for it.
+** flaws
+*** If there's a plan, I'll forget it. If I don't forget it, I'll ignore it.
+* feats [update]
+** racial
+*** squat nimbleness
++ Prerequisite: Dwarf or a Small race
++ You are uncommonly nimble for your race. You gain the following benefits:
++ Increase your Strength or Dexterity score by 1, to a maximum of 20.
++ your walking speed by 5 feet.
++ You gain proficiency in the Acrobatics or Athletics skill (your choice).
++ You have advantage on any Strength (Athletics) or Dexterity (Acrobatics) check you make to escape from being grappled.
+** fey touched
+- Your exposure to the Feywild's magic has changed you, granting you the following benefits:
+- Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
+- You learn the Misty Step spell and one 1st-level spell of your choice. The 1st-level spell must be from the Divination or Enchantment school of magic. You can cast each of these spells without expending a spell slot. Once you cast either of these spells in this way, you can’t cast that spell in this way again until you finish a long rest. You can also cast these spells using spell slots you have of the appropriate level. The spells’ spellcasting ability is the ability increased by this feat.
+** shadow touched
+- Your exposure to the Shadowfell's magic has changed you, granting you the following benefits:
+- Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
+- You learn the Invisibility spell and one 1st-level spell of your choice. The 1st-level spell must be from the Illusion or Necromancy school of magic. You can cast each of these spells without expending a spell slot. Once you cast either of these spells in this way, you can't cast that spell in this way again until you finish a long rest. You can also cast these spells using spell slots you have of the appropriate level. The spells' spellcasting ability is the ability increased by this feat.
+** tough
+*** Your hit point maximum increases by an amount equal to twice your level when you gain this feat. Whenever you gain a level thereafter, your hit point maximum increases by an additional 2 hit points
+** metamagic adept
+*** You've learned how to exert your will on your spells to alter how they function:
+*** You learn two Metamagic options of your choice from the sorcerer class. You can use only one Metamagic option on a spell when you cast it, unless the option says otherwise. Whenever you reach a level that grants the Ability Score Improvement feature, you can replace one of these Metamagic options with another one from the sorcerer class.
+*** You gain 2 sorcery points to spend on Metamagic (these points are added to any sorcery points you have from another source but can be used only on Metamagic). You regain all spent sorcery points when you finish a long rest.
+*** empowered spell
+- When you roll damage for a spell, you can spend 1 sorcery point to reroll a number of the damage dice up to your Charisma modifier (minimum of one). You must use the new rolls.
+- You can use Empowered Spell even if you have already used a different Metamagic option during the casting of the spell.
+*** quickened spell
+- When you cast a spell that has a casting time of 1 action, you can spend 2 sorcery points to change the casting time to 1 bonus action for this casting.
+* equipment
+** weapons
+- crossbow, light, 20 bolts
+- simple weapon
+- two daggers
+** items
+- component pouch
+- bedroll
+  - 2lb
+- blanket
+  - 5lb
+- healer's kit
+  - 3lb
+- 4 ball bearing bags
+  - 2lbx4
+** wonderous items
+*** uncommon 3
++ periapt of wound closure ?
+  - Wondrous item, uncommon (requires attunement)
+  - While you wear this pendant, you stabilize whenever you are dying at the start of your turn. In addition, whenever you roll a Hit Die to regain hit points, double the number of hit points it restores.
++ 2
+  -
++ 3
+  -
+  -
+  -
+*** rare 1
++ amulet of health
+  - Your Constitution score is 19 while you wear this amulet. It has no effect on you if your Constitution is 19 or higher without it.
+*** very rare 0
++
+  -
+  -
+*** attunements 3
+**** amulet of health
+**** i
+**** q
+** dungeoneer's pack
+- backpack
+- crowbar
+- hammer
+- 10 pitons
+- 10 torches
+- tinderbox
+- 10 rations
+- waterskin
+- hempen rope, 50 ft
+
+* Equipment
+  | Name                 | Quantity | Cost (gp) | Weight (lbs) | Total Weight (lbs) | Total Cost (gp) |
+  |----------------------+----------+-----------+--------------+--------------------+-----------------|
+  | Light Crossbow       |        1 |        25 |            5 |                  5 |              25 |
+  | Crossbow bolts       |       40 |         1 |          1.5 |                60. |              40 |
+  | Shortsword           |        1 |        10 |            2 |                  2 |              10 |
+  | Dagger               |        4 |         2 |            1 |                  4 |               8 |
+  | Arcane Focus, Orb    |        1 |        20 |            3 |                  3 |              20 |
+  | Backpack             |        1 |         2 |            5 |                  5 |               2 |
+  | Ball Bearings (1000) |        2 |         1 |            2 |                  4 |               2 |
+  | Healer's Kit         |        1 |         5 |            3 |                  3 |               5 |
+  | Crowbar              |        1 |         2 |            5 |                  5 |               2 |
+  | Hammer               |        1 |         1 |            3 |                  3 |               1 |
+  | Piton                |       10 |       .05 |          .25 |                2.5 |             0.5 |
+  | Torch                |       10 |       .01 |            1 |                 10 |             0.1 |
+  | Tinderbox            |        1 |        .5 |            1 |                  1 |             0.5 |
+  | Ration               |       10 |        .5 |            2 |                 20 |              5. |
+  | Bedroll              |        1 |         1 |            2 |                  2 |               1 |
+  | Waterskin            |        1 |        .2 |            5 |                  5 |             0.2 |
+  | Hempen Rope (50ft)   |        1 |         1 |           10 |                 10 |               1 |
+  | Robes                |        1 |         1 |            4 |                  4 |               1 |
+  |----------------------+----------+-----------+--------------+--------------------+-----------------|
+  | Carry Capacity       |       90 |           |              |              148.5 |           124.3 |
+  #+TBLFM: $5=($2 * $4)
+  #+TBLFM: $6=($2 * $3)
+  #+TBLFM: @>$5=vsum(@<<$5..@>>$5)
+  #+TBLFM: @>$6=vsum(@<<$6..@>>$6)
+  #+TBLFM: @>$2=($STR * 10)
+
+
+* spells
+** cantrips
+1. eldritch blast  
+   + Casting Time: 1 action
+   + Range: 120 feet
+   + Components: V, S
+   + Duration: Instantaneous
+   + A beam of crackling energy streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 force damage.
+   + At Higher Levels. The spell creates more than one beam when you reach higher levels: two beams at 5th level, three beams at 11th level, and four beams at 17th level. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam.
+2. toll the dead
+   + Casting Time: 1 action
+   + Range: 60 feet
+   + Components: V, S
+   + Duration: Instantaneous
+   + You point at one creature you can see within range, and the sound of a dolorous bell fills the air around it for a moment. The target must succeed on a Wisdom saving throw or take 1d8 necrotic damage. If the target is missing any of its hit points, it instead takes 1d12 necrotic damage.
+   + At Higher Levels. The spell’s damage increases by one die when you reach 5th level (2d8 or 2d12), 11th level (3d8 or 3d12), and 17th level (4d8 or 4d12).
+3. mind sliver
+   + Casting Time: 1 action
+   + Range: 60 feet
+   + Components: V
+   + Duration: 1 round
+   + You drive a disorienting spike of psychic energy into the mind of one creature you can see within range. The target must succeed on an Intelligence saving throw or take 1d6 psychic damage and subtract 1d4 from the next saving throw it makes before the end of your next turn.
+   + At Higher Levels. This spell’s damage increases by 1d6 when you reach certain levels: 5th level (2d6), 11th level (3d6), and 17th level (4d6).
+4. mage hand
+   + Casting Time: 1 action
+   + Range: 30 feet
+   + Components: V, S
+   + Duration: 1 minute
+   + A spectral, floating hand appears at a point you choose within range. The hand lasts for the duration or until you dismiss it as an action. The hand vanishes if it is ever more than 30 feet away from you or if you cast this spell again.
+   + You can use your action to control the hand. You can use the hand to manipulate an object, open an unlocked door or container, stow or retrieve an item from an open container, or pour the contents out of a vial. You can move the hand up to 30 feet each time you use it.
+   + The hand can’t attack, activate magical items, or carry more than 10 pounds.
+** non-slot
+1. guidance
+   + Casting Time: 1 action
+   + Range: Touch
+   + Components: V, S
+   + Duration: Concentration, up to 1 minute
+   + You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one ability check of its choice. It can roll the die before or after making the ability check. The spell then ends.
+2. ray of frost
+   + Casting Time: 1 action
+   + Range: 60 feet
+   + Components: V, S
+   + Duration: Instantaneous
+   + A frigid beam of blue-white light streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, it takes 1d8 cold damage, and its speed is reduced by 10 feet until the start of your next turn.
+   + At Higher Levels. The spell’s damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).
+3. shocking grasp
+   + Casting Time: 1 action
+   + Range: Touch
+   + Components: V, S
+   + Duration: Instantaneous
+   + Lightning springs from your hand to deliver a shock to a creature you try to touch. Make a melee spell attack against the target. You have advantage on the attack roll if the target is wearing armor made of metal. On a hit, the target takes 1d8 lightning damage, and it can’t take reactions until the start of its next turn.
+   + At Higher Levels. The spell’s damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).
+** spell slots
+1. [ ] 
+2. [ ] 
+3. [ ] 
+4. [ ] 
+** spells known
+1. cone of cold
+   + Casting Time: 1 action
+   + Range: Self (60-foot cone)
+   + Components: V, S, M (a small crystal or glass cone)
+   + Duration: Instantaneous
+   + A blast of cold air erupts from your hands. Each creature in a 60-foot cone must make a Constitution saving throw. A creature takes 8d8 cold damage on a failed save, or half as much damage on a successful one. A creature killed by this spell becomes a frozen statue until it thaws.
+   + At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th.    
+2. bigby's hand
+   + Casting Time: 1 action
+   + Range: 120 feet
+   + Components: V, S, M (an eggshell and a snakeskin glove)
+   + Duration: Concentration, up to 1 minute
+   + You create a Large hand of shimmering, translucent force in an unoccupied space that you can see within range. The hand lasts for the spell’s duration, and it moves at your command, mimicking the movements of your own hand.
+   + The hand is an object that has AC 20 and hit points equal to your hit point maximum. If it drops to 0 hit points, the spell ends. It has a Strength of 26 (+8) and a Dexterity of 10 (+0). The hand doesn’t fill its space.
+   + When you cast the spell and as a bonus action on your subsequent turns, you can move the hand up to 60 feet and then cause one of the following effects with it.
+   + Clenched Fist. The hand strikes one creature or object within 5 feet of it. Make a melee spell attack for the hand using your game statistics. On a hit, the target takes 4d8 force damage.
+   + Forceful Hand. The hand attempts to push a creature within 5 feet of it in a direction you choose. Make a check with the hand’s Strength contested by the Strength (Athletics) check of the target. If the target is Medium or smaller, you have advantage on the check. If you succeed, the hand pushes the target up to 5 feet plus a number of feet equal to five times your spellcasting ability modifier. The hand moves with the target to remain within 5 feet of it.
+   + Grasping Hand. The hand attempts to grapple a Huge or smaller creature within 5 feet of it. You use the hand’s Strength score to resolve the grapple. If the target is Medium or smaller, you have advantage on the check. While the hand is grappling the target, you can use a bonus action to have the hand crush it. When you do so, the target takes bludgeoning damage equal to 2d6 + your spellcasting ability modifier.
+   + Interposing Hand. The hand interposes itself between you and a creature you choose until you give the hand a different command. The hand moves to stay between you and the target, providing you with half cover against the target. The target can’t move through the hand’s space if its Strength score is less than or equal to the hand’s Strength score. If its Strength score is higher than the hand’s Strength score, the target can move toward you through the hand’s space, but that space is difficult terrain for the target.
+   + At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the damage from the clenched fist option increases by 2d8 and the damage from the grasping hand increases by 2d6 for each slot level above 5th.
+3. hex
+   -Casting Time: 1 bonus action
+   - Range: 90 feet
+   - Components: V, S, M (the petrified eye of a newt)
+   - Duration: Concentration, up to 1 hour
+   - You place a curse on a creature that you can see within range. Until the spell ends, you deal an extra 1d6 necrotic damage to the target whenever you hit it with an attack. Also, choose one ability when you cast the spell. The target has disadvantage on ability checks made with the chosen ability.
+   - If the target drops to 0 hit points before this spell ends, you can use a bonus action on a subsequent turn of yours to curse a new creature.
+   - A Remove Curse cast on the target ends this spell early.
+   - At Higher Levels. When you cast this spell using a spell slot of 3rd or 4th level, you can maintain your concentration on the spell for up to 8 hours. When you use a spell slot of 5th level or higher, you can maintain your concentration on the spell for up to 24 hours.
+4. hellish rebuke
+   -Casting Time: 1 reaction, which you take when you are damaged by a creature within 60 feet of you that you can see
+   - Range: 60 feet
+   - Components: V, S
+   - Duration: Instantaneous
+   - You point your finger, and the creature that damaged you is momentarily surrounded by hellish flames. The creature must make a Dexterity saving throw. It takes 2d10 fire damage on a failed save, or half as much damage on a successful one.
+   - At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st.
+5. witch bolt
+   - Casting Time: 1 action
+   - Range: 30 feet
+   - Components: V, S, M (a twig from a tree that has been struck by lightning)
+   - Duration: Concentration, up to 1 minute
+   - A beam of crackling, blue energy lances out toward a creature within range, forming a sustained arc of lightning between you and the target. Make a ranged spell attack against that creature. On a hit, the target takes 1d12 lightning damage, and on each of your turns for the duration, you can use your action to deal 1d12 lightning damage to the target automatically. The spell ends if you use your action to do anything else. The spell also ends if the target is ever outside the spell’s range or if it has total cover from you.
+   - At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the initial damage increases by 1d12 for each slot level above 1st.
+6. mirror image
+   - Casting Time: 1 action
+   - Range: Self
+   - Components: V, S
+   - Duration: 1 minute
+   - Three illusory duplicates of yourself appear in your space. Until the spell ends, the duplicates move with you and mimic your actions, shifting position so it’s impossible to track which image is real. You can use your action to dismiss the illusory duplicates.
+   - Each time a creature targets you with an attack during the spell’s duration, roll a d20 to determine whether the attack instead targets one of your duplicates.
+   - If you have three duplicates, you must roll a 6 or higher to change the attack’s target to a duplicate. With two duplicates, you must roll an 8 or higher. With one duplicate, you must roll an 11 or higher.
+   - A duplicate’s AC equals 10 + your Dexterity modifier. If an attack hits a duplicate, the duplicate is destroyed. A duplicate can be destroyed only by an attack that hits it. It ignores all other damage and effects. The spell ends when all three duplicates are destroyed.
+   - A creature is unaffected by this spell if it can’t see, if it relies on senses other than sight, such as blindsight, or if it can perceive illusions as false, as with truesight.
+7. cloud of daggers
+   - Casting Time: 1 action
+   - Range: 60 feet
+   - Components: V, S, M (a sliver of glass)
+   - Duration: Concentration, up to 1 minute
+   - You fill the air with spinning daggers in a cube 5 feet on each side, centered on a point you choose within range. A creature takes 4d4 slashing damage when it enters the spell’s area for the first time on a turn or starts its turn there.
+   - At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 2d4 for each slot level above 2nd.
+8. synaptic static
+   - Casting Time: 1 action
+   - Components: V, S
+   - Range: 120 feet
+   - Duration: Instantaneous
+   - You choose a point within range and cause psychic energy to explode there. Each creature in a 20-foot-radius sphere centered on that point must make an Intelligence saving throw. A creature with an Intelligence score of 2 or lower can’t be affected by this spell. A target takes 8d6 psychic damage on a failed save, or half as much damage on a successful one.
+   - After a failed save, a target has muddled thoughts for 1 minute. During that time, it rolls a d6 and subtracts the number rolled from all its attack rolls and ability checks, as well as its Constitution saving throws to maintain concentration. The target can make an Intelligence saving throw at the end of each of its turns, ending the effect on itself on a success.
+9. counterspell
+   - Casting Time: 1 reaction, which you take when you see a creature within 60 feet of you casting a spell
+   - Range: 60 feet
+   - Components: S
+   - Duration: Instantaneous
+   - You attempt to interrupt a creature in the process of casting a spell. If the creature is casting a spell of 3rd level or lower, its spell fails and has no effect. If it is casting a spell of 4th level or higher, make an ability check using your spellcasting ability. The DC equals 10 + the spell’s level. On a success, the creature’s spell fails and has no effect.
+   - At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the interrupted spell has no effect if its level is less than or equal to the level of the spell slot you used.
+10. protection from evil and good
+    - Casting Time: 1 action
+    - Range: Touch
+    - Components: V, S, M (holy water or powdered silver and iron, which the spell consumes)
+    - Duration: Concentration, up to 10 minutes
+    - Until the spell ends, one willing creature you touch is protected against certain types of creatures: aberrations, celestials, elementals, fey, fiends, and undead.
+    - The protection grants several benefits. Creatures of those types have disadvantage on attack rolls against the target. The target also can’t be charmed, frightened, or possessed by them. If the target is already charmed, frightened, or possessed by such a creature, the target has advantage on any new saving throw against the relevant effect.
+11. negative energy flood
+    - Casting Time: 1 action
+    - Range: 60 feet
+    - Components: V, M (a broken bone and a square of black silk)
+    - Duration: Instantaneous
+    - You send ribbons of negative energy at one creature you can see within range. Unless the target is undead, it must make a Constitution saving throw, taking 5d12 necrotic damage on a failed save, or half as much damage on a successful one. A target killed by this damage rises up as a zombie at the start of your next turn. The zombie pursues whatever creature it can see that is closest to it. Statistics for the zombie are in the Monster Manual. If you target an undead with this spell, the target doesn’t make a saving throw. Instead, roll 5d12. The target gains half the total as temporary hit points.
+12. enervation
+    - Casting Time: 1 action
+    - Range: 60 feet
+    - Components: V, S
+    - Duration: Concentration, up to 1 minute
+    - A tendril of inky darkness reaches out from you, touching a creature you can see within range to drain life from it. The target must make a Dexterity saving throw. On a successful save, the target takes 2d8 necrotic damage, and the spell ends. On a failed save, the target takes 4d8 necrotic damage, and until the spell ends, you can use your action on each of your turns to automatically deal 4d8 necrotic damage to the target. The spell ends if you use your action to do anything else, if the target is ever outside the spell’s range, or if the target has total cover from you. Whenever the spell deals damage to a target, you regain hit points equal to half the amount of necrotic damage the target takes.
+    - At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th.
+13. fear
+    - Casting Time: 1 action
+    - Range: Self (30-foot cone)
+    - Components: V, S, M (a white feather or the heart of a hen)
+    - Duration: Concentration, up to 1 minute
+    - You project a phantasmal image of a creature’s worst fears. Each creature in a 30-foot cone must succeed on a Wisdom saving throw or drop whatever it is holding and become frightened for the duration.
+    - While frightened by this spell, a creature must take the Dash action and move away from you by the safest available route on each of its turns, unless there is nowhere to move. If the creature ends its turn in a location where it doesn’t have line of sight to you, the creature can make a Wisdom saving throw. On a successful save, the spell ends for that creature.
+14. flock of familiars
+    - Casting Time: 1 minute
+    - Range: Touch
+    - Components: V, S
+    - Duration: Concentration, up to 1 hour
+    - You temporarily summon three familiars – spirits that take animal forms of your choice. Each familiar uses the same rules and options for a familiar conjured by the Find Familiar spell. All the familiars conjured by this spell must be the same type of creature (celestials, fey, or fiends; your choice). If you already have a familiar conjured by the Find Familiar spell or similar means, then one fewer familiars are conjured by this spell.
+    - Familiars summoned by this spell can telepathically communicate with you and share their visual or auditory senses while they are within 1 mile of you.
+    - When you cast a spell with a range of touch, one of the familiars conjured by this spell can deliver the spell, as normal. However, you can cast a touch spell through only one familiar per turn.
+    - At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, you conjure an additional familiar for each slot level above 2nd.
+15. mind spike
+    - Casting Time: 1 action
+    - Range: 60 feet
+    - Components: S
+    - Duration: Concentration, up to 1 hour
+    - You reach into the mind of one creature you can see within range. The target must make a Wisdom saving throw, taking 3d8 psychic damage on a failed save, or half as much damage on a successful one. On a failed save, you also always know the target's location until the spell ends, but only while the two of you are on the same plane of existence. While you have this knowledge, the target can’t become hidden from you, and if it’s invisible, it gains no benefit from that condition against you.
+    - At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd.
+** non slot spells
+1. color spray
+   - Casting Time: 1 action
+   - Range: Self (15-foot cone)
+   - Components: V, S, M
+   - Duration: 1 round
+   - A dazzling array of flashing, colored light springs from your hand. Roll 6d10, the total is how many hit points of creatures this spell can effect. Creatures in a 15-foot cone originating from you are affected in ascending order of their current hit points (ignoring unconscious creatures and creatures that can’t see).
+   - Starting with the creature that has the lowest current hit points, each creature affected by this spell is blinded until the end of your next turn. Subtract each creature’s hit points from the total before moving on to the creature with the next lowest hit points. A creature’s hit points must be equal to or less than the remaining total for the creature to be affected.
+   - At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, roll an additional 2d10 for each slot level above 1st.
+2. silvery barbs
+   - Casting Time: 1 reaction, which you take when a creature you can see within 60 feet of yourself succeeds on an attack roll, an ability check, or a saving throw
+   - Range: 60 feet
+   - Components: V
+   - Duration: Instantaneous
+   - You magically distract the triggering creature and turn its momentary uncertainty into encouragement for another creature. The triggering creature must reroll the d20 and use the lower roll.
+   - You can then choose a different creature you can see within range (you can choose yourself). The chosen creature has advantage on the next attack roll, ability check, or saving throw it makes within 1 minute. A creature can be empowered by only one use of this spell at a time.
+3. evard's black tentacles 
+   - Casting Time: 1 action
+   - Range: 90 feet
+   - Components: V, S, M (a piece of tentacle from a giant octopus or a giant squid)
+   - Duration: Concentration, up to 1 minute
+   - Squirming, ebony tentacles fill a 20-foot square on ground that you can see within range. For the duration, these tentacles turn the ground in the area into difficult terrain.
+   - When a creature enters the affected area for the first time on a turn or starts its turn there, the creature must succeed on a Dexterity saving throw or take 3d6 bludgeoning damage and be restrained by the tentacles until the spell ends. A creature that starts its turn in the area and is already restrained by the tentacles takes 3d6 bludgeoning damage.
+   - A creature restrained by the tentacles can use its action to make a Strength or Dexterity check (its choice) against your spell save DC. On a success, it frees itself.
+4. invisibility
+   - Casting Time: 1 action
+   - Range: Touch
+   - Components: V, S, M (an eyelash encased in gum arabic)
+   - Duration: Concentration, up to 1 hour
+   - A creature you touch becomes invisible until the spell ends. Anything the target is wearing or carrying is invisible as long as it is on the target’s person. The spell ends for a target that attacks or casts a spell.
+   - At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd.
+5. polymorph
+   - Casting Time: 1 action
+   - Range: 60 feet
+   - Components: V, S, M (a caterpillar cocoon)
+   - Duration: Concentration, up to 1 hour
+   - This spell transforms a creature that you can see within range into a new form. An unwilling creature must make a Wisdom saving throw to avoid the effect. A shapechanger automatically succeeds on this saving  
+   - The transformation lasts for the duration, or until the target drops to 0 hit points or dies. The new form can be any beast whose challenge rating is equal to or less than the target’s (or the target’s level, if it doesn’t have a challenge rating). The target’s game statistics, including mental ability scores, are replaced by the statistics of the chosen beast. It retains its alignment and personality.
+   - The target assumes the hit points of its new form. When it reverts to its normal form, the creature returns to the number of hit points it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its normal form. As long as the excess damage doesn’t reduce the creature’s normal form to 0 hit points, it isn’t knocked unconscious.
+   - The creature is limited in the actions it can perform by the nature of its new form, and it can’t speak, cast spells, or take any other action that requires hands or speech.
+   - The target’s gear melds into the new form. The creature can’t activate, use, wield, or otherwise benefit from any of its equipment. This spell can’t affect a target that has 0 hit points.
+6. arcane eye
+   - Casting Time: 1 action
+   - Range: 30 feet
+   - Components: V, S, M (a bit of bat fur)
+   - Duration: Concentration, up to 1 hour
+   - You create an invisible, magical eye within range that hovers in the air for the duration. You mentally receive visual information from the eye, which has normal vision and darkvision out to 30 feet. The eye can look in every direction.
+   - As an action, you can move the eye up to 30 feet in any direction. There is no limit to how far away from you the eye can move, but it can’t enter another plane of existence. A solid barrier blocks the eye’s movement, but the eye can pass through an opening as small as 1 inch in diameter.
+7. gift of the protectors
+   - Prerequisite: 9th level, Pact of the Tome feature
+   - A new page appears in your Book of Shadows. With your permission, a creature can use its action to write its name on that page, which can contain a number of names equal to your proficiency bonus.
+   - When any creature whose name is on the page is reduced to 0 hit points but not killed outright, the creature magically drops to 1 hit point instead. Once this magic is triggered, no creature can benefit from it until you finish a long rest.
+   - As an action, you can magically erase a name on the page by touching it.
+8. mage armor
+   - Casting Time: 1 action
+   - Range: Touch
+   - Components: V, S, M (a piece of cured leather)
+   - Duration: 8 hours
+   - You touch a willing creature who isn’t wearing armor, and a protective magical force surrounds it until the spell ends. The target’s base AC becomes 13 + its Dexterity modifier. The spell ends if the target dons armor or if you dismiss the spell as an action.
+9. misty step
+   - 2nd-level conjuration
+   - Casting Time: 1 bonus action
+   - Range: Self
+   - Components: V
+   - Duration: Instantaneous
+   - Briefly surrounded by silvery mist, you teleport up to 30 feet to an unoccupied space that you can see.
+   - once per long rest
+** sorcery points
+1. Gift of the Protectors
+   + Prerequisite: 9th level, Pact of the Tome feature
+   + A new page appears in your Book of Shadows. With your permission, a creature can use its action to write its name on that page, which can contain a number of names equal to your proficiency bonus.
+   + When any creature whose name is on the page is reduced to 0 hit points but not killed outright, the creature magically drops to 1 hit point instead. Once this magic is triggered, no creature can benefit from it until you finish a long rest.
+   + As an action, you can magically erase a name on the page by touching it.
+2. Agonizing Blast
+   + Prerequisite: Eldritch Blast cantrip
+   + When you cast Eldritch Blast, add your Charisma modifier to the damage it deals on a hit.
+3. Armor of Shadows
+   + You can cast Mage Armor on yourself at will, without expending a spell slot or material components.
+     + mage armor
+       + 
+4. Repelling Blast
+   + Prerequisite: Eldritch Blast cantrip
+   + When you hit a creature with Eldritch Blast, you can push the creature up to 10 feet away from you in a straight line.
+5. Maddening Hex
+   + Prerequisite: 5th level, Hex spell or a warlock feature that curses
+   + As a bonus action, you cause a psychic disturbance around the target cursed by your Hex spell or by a warlock feature of yours, such as Hexblade’s Curse and Sign of Ill Omen. When you do so, you deal psychic damage to the cursed target and each creature of your choice within 5 feet of it. The psychic damage equals your Charisma modifier (minimum of 1 damage). To use this invocation, you must be able to see the cursed target, and it must be within 30 feet of you.
+6. Sculptor of Flesh
+   + Prerequisite: 7th level
+   + You can cast Polymorph once using a warlock spell slot. You can't do so again until you finish a long rest.
+     + polymorph
+7. Visions of Distant Realsm
+   + Prerequisite: 15th level
+   + You can cast Arcane Eye at will, without expending a spell slot.
+     + arcane eye
+8. Shroud of Shadow
+   + Prerequisite: 15th level
+   + You can cast Invisibility at will, without expending a spell slot.
+     + invisibilty
+* base abilities
+** str 9
+*** -1
+** dex 13 +1 (fairy asi) +1 (squat nimbleness) 15
+*** +2
+** con 9 (19)
+*** -1
+*** (+4)
+** int 11
+*** +0
+** wis 11
+*** +0
+** *cha* 14 + 2 (fairy asi) 16
+*** +3
+*** 4th asi
+*** 8th fey touch
+*** 12th shadow touch
+* patron
+** fathomless
+*** tentacle of the deep
+- At 1st level, you can magically summon a spectral tentacle that strikes at your foes. As a bonus action, you create a 10-foot-long tentacle at a point you can see within 60 feet of you. The tentacle lasts for 1 minute or until you use this feature to create another tentacle.
+- When you create the tentacle, you can make a melee spell attack against one creature within 10 feet of it. On a hit, the target takes 1d8 cold damage, and its speed is reduced by 10 feet until the start of your next turn. When you reach 10th level in this class, the damage increases to 2d8.
+- As a bonus action on your turn, you can move the tentacle up to 30 feet and repeat the attack .
+- You can summon the tentacle a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
+*** gift of the sea
+-Also at 1st level, you gain a swimming speed of 40 feet, and you can breathe underwater.
+*** oceanic soul
+-At 6th level, you are now even more at home in the depths. You gain resistance to cold damage. In addition, when you are fully submerged, any creature that is also fully submerged can understand your speech, and you can understand theirs
+*** guardian coil
+- At 6th level, your Tentacle of the Deeps can defend you and others, interposing itself between them and harm. When you or a creature you can see takes damage while within 10 feet of the tentacle, you can use your reaction to choose one of those creatures and reduce the damage to that creature by 1d8. When you reach 10th level in this class, the damage reduced by the tentacle increases to 2d8.
+*** grasping tentacles
+- Starting at 10th level, you learn the spell Evard's Black Tentacles. It counts as a warlock spell for you, but it doesn't count against the number of spells you know. You can also cast it once without using a spell slot, and you regain the ability to do so when you finish a long rest.
+- Whenever you cast this spell, your patron's magic bolsters you, granting you a number of temporary hit points equal to your warlock level. Moreover, damage can't break your concentration on this spell.
+*** fathomless plunge
+- When you reach 14th level, you can magically open temporary conduits to watery destinations. As an action, you can teleport yourself and up to five other willing creatures that you can see within 30 feet of you. Amid a whirl of tentacles, you all vanish and then reappear up to 1 mile away in a body of water you've seen (pond size or larger) or within 30 feet of it, each of you appearing in an unoccupied space within 30 feet of the others.
+- Once you use this feature, you can't use it again until you finish a short or long rest.
+* saving throws
+* skills
+** deception
+* level bonuses
+** ability score improvement
+*** : 4,8,12,16,19: 1 ablility +2 or 2 ability +1, cap 20
+**** 4th +2 CHA
+** feats
+*** replace asi, same requirements
+**** 8th fey touched
+- Your exposure to the Feywild's magic has changed you, granting you the following benefits:
+- Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
+- You learn the Misty Step spell and one 1st-level spell of your choice. The 1st-level spell must be from the Divination or Enchantment school of magic. You can cast each of these spells without expending a spell slot. Once you cast either of these spells in this way, you can’t cast that spell in this way again until you finish a long rest. You can also cast these spells using spell slots you have of the appropriate level. The spells’ spellcasting ability is the ability increased by this feat.
+**** 12th shadow touched
+- Your exposure to the Shadowfell's magic has changed you, granting you the following benefits:
+- Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
+- You learn the Invisibility spell and one 1st-level spell of your choice. The 1st-level spell must be from the Illusion or Necromancy school of magic. You can cast each of these spells without expending a spell slot. Once you cast either of these spells in this way, you can't cast that spell in this way again until you finish a long rest. You can also cast these spells using spell slots you have of the appropriate level. The spells' spellcasting ability is the ability increased by this feat.
+**** 16th tough
+- + 40 hp
+**** 19th metamagic adept
+- empowered spell
+- quickened
+** mystic arcanum
+*** 11th 
+**** 6th level warlock spell
+*****      once per long rest
+*****      no spell slot usage
+*** 13th
+****  7th level warlock spell
+*****      once per long rest
+*****      no spell slot usage
+*** 15th
+****  8th level warlock spell
+*****      once per long rest
+*****      no spell slot usage
+*** 17th
+****  9th level warlock spell
+*****      once per long rest
+*****      no spell slot usage
+** eldritch master 
+*** 20th
+**** spend 1 minute entreating patron to regen pact magic spell slot
+**** long rest
+** pact of the tome
+- Your patron gives you a grimoire called a Book of Shadows. When you gain this feature, choose three cantrips from any class's spell list (the three needn't be from the same list). While the book is on your person, you can cast those cantrips at will. They don't count against your number of cantrips known. If they don't appear on the warlock spell list, they are nonetheless warlock spells for you.
+- If you lose your Book of Shadows, you can perform a 1-hour ceremony to receive a replacement from your patron. This ceremony can be performed during a short or long rest, and it destroys the previous book. The book turns to ash when you die.
+* additional info
+** Grovel, Cower, and Beg
+*** As an action on your turn, you can cower pathetically to distract nearby foes. Until the end of your next turn, your allies gain advantage on attack rolls against enemies within 10 feet of you that can see you. Once you use this trait, you can't use it again until you finish a short or long rest.
+** Pack Tactics
+*** You have advantage on an attack roll against a creature if at least one of your allies is within 5 feet of the creature and the ally isn't incapacitated.
+** Sunlight Sensitivity
+*** You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight.
+** Magic Theme
+*** brine-scented shapes of sharks, jellyfish, octopi, and other sea creatures
+* datum
+** raw
+*** 1+2+3+6 = 11 int
+*** 2+3+4+4 = 11 str
+*** 2+2+3+3 = 8 dump
+*** 3+3+5+5 = 13 wis
+*** 1+2+2+3 = 7 dump
+*** 4+5+5+6 = 16 cha
+*** reroll:
+*** 1+4+5+5 = 14 dex
+*** 2+2+3+4 = 9 con
+** hit dice
+***  12d6
+
+** hit dice raw
+*** base 10 + 6 + 6 + 3 + 4 + 5 + 1 + 2 + 4 + 2 + 3 + 2 + 1
+*** sum 49 + con mod (48) + tough feat (40)
+*** total _
+*** proficiencies
+**** weapons
+- darts
+- slings
+- quarterstaves
+- light crowsbows
+**** saving throws
+***** con
+***** cha
+**** skills 2
+***** insight
+***** arcana
+**** dice set
+**** thieves' tools
+***** deception
+***** stealth
+*** passive perception
+** 
+* markdown ref
+
+#+BEGIN_COMMENT
+To markup text in Org, simply surround it with one or more marker characters.
+*Bold*, /italic/ and _underline_ are fairly intuitive, and the ability to use
++strikethrough+ is a plus.  You can _/*combine*/_ the basic markup in any
+order, however ~code~ and =verbatim= need to be the *_~inner-most~_* markers
+if they are present since their contents are interpreted =_literally_=.
+#+END_COMMENT
