@@ -18,6 +18,10 @@
 |--------+--------+----------+------+----------+------------|
 |      0 |      0 |        0 | 7250 |        0 |       7250 |
 #+TBLFM: $6=(($1/100) + ($2 /10) + ($3 /2) + $4 + ($5 *10 ))
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d431bde (character features)
 ** Sorcerer Points
 - 14
 ** Passive Perception
@@ -45,6 +49,10 @@
    2. [ ]
 6. 6th Level
    1. [ ]
+=======
+
+** passive per
+*** 10
 
 * Abilities and Skills
   #+name: stats
@@ -95,14 +103,283 @@
   #+TBLFM: @21$5..@25$5='(concat "1d20 + " (number-to-string (+ (calc-dnd-pb $PROF $4) (calc-dnd-mod (string-to-number (org-table-get-constant @21$1))))))
 
 * Stats
+<<<<<<< HEAD
   | Walking Speed | Flying speed | Climbing Speed | Hit Points | AC            | Death Saves | Inspiration |
   |---------------+--------------+----------------+------------+---------------+-------------+-------------|
   |            30 |           30 |             15 | 121/121    | 13 (16 w M.A) |             |             |
+=======
+  | Walking Speed | Flying speed | Climbing Speed | Hit Points | AC | Death Saves | Inspiration |
+  |---------------+--------------+----------------+------------+----+-------------+-------------|
+  |            35 |           35 |             25 | 12/12      | 17 |             |             |
+
+* Constants
+  #+NAME: define-constants-with-src-block
+  #+BEGIN_SRC elisp :var table=stats :colnames yes :results output drawer :cache yes :lang elisp
+    (dnd-output-ability-constants table)
+    #+END_SRC
+
+    #+RESULTS[8dfb350fab99f9e344c67426dd2f571706d37e1e]: define-constants-with-src-block
+    :results:
+    #+CONSTANTS: STR=9
+    #+CONSTANTS: DEX=15
+    #+CONSTANTS: CON=19
+    #+CONSTANTS: INT=11
+    #+CONSTANTS: WIS=11
+    #+CONSTANTS: CHA=16
+    #+CONSTANTS: PROF=4
+    :end:
+>>>>>>> d431bde (character features)
 
 * Traits
   | Level | Race  | Subrace | Class    | Subclass      | Age | Alignment    | Size        |
   |-------+-------+---------+----------+---------------+-----+--------------+-------------|
   |    12 | Fairy |         | Sorcerer | Abberant Mind |  30 | Chaotic Good | Small (3ft) |
+<<<<<<< HEAD
+=======
+>>>>>>> 8ad1332 (not sure what's changed here)
+
+* Abilities and Skills
+  #+name: stats
+  | Ability | Score | Mod | PB | Roll      | Skill           |
+  |---------+-------+-----+----+-----------+-----------------|
+  | STR     |     9 |  -1 |    | 1d20 + -1 | Saving Throw    |
+  |         |       |     |    | 1d20 + -1 | Athletics       |
+  |---------+-------+-----+----+-----------+-----------------|
+  | DEX     |    16 |   3 |    | 1d20 + 3  | Saving Throw    |
+  |         |       |     |    | 1d20 + 3  | Acrobatics      |
+  |         |       |     |    | 1d20 + 3  | Sleight of Hand |
+  |         |       |     |  7 | 1d20 + 3  | Stealth         |
+  |---------+-------+-----+----+-----------+-----------------|
+  | CON     |    19 |   4 |  8 | 1d20 + 4  | Saving Throw    |
+  |---------+-------+-----+----+-----------+-----------------|
+  | INT     |    11 |   0 |    | 1d20 + 0  | Saving Throw    |
+  |         |       |     |    | 1d20 + 0  | Arcana          |
+  |         |       |     |    | 1d20 + 0  | History         |
+  |         |       |     |    | 1d20 + 0  | Investigation   |
+  |         |       |     |    | 1d20 + 0  | Nature          |
+  |         |       |     |    | 1d20 + 0  | Religion        |
+  |---------+-------+-----+----+-----------+-----------------|
+  | WIS     |    11 |   0 |    | 1d20 + 0  | Saving Throw    |
+  |         |       |     |    | 1d20 + 0  | Animal Handling |
+  |         |       |     |    | 1d20 + 0  | Insight         |
+  |         |       |     |    | 1d20 + 0  | Medicine        |
+  |         |       |     |    | 1d20 + 0  | Perception      |
+  |         |       |     |    | 1d20 + 0  | Survival        |
+  |---------+-------+-----+----+-----------+-----------------|
+  | CHA     |    20 |   5 |  8 | 1d20 + 5  | Saving Throw    |
+  |         |       |     |  8 | 1d20 + 5  | Deception       |
+  |         |       |     |  8 | 1d20 + 5  | Intimidation    |
+  |         |       |     |  0 | 1d20 + 5  | Performance     |
+  |         |       |     |  8 | 1d20 + 5  | Persuasion      |
+  |---------+-------+-----+----+-----------+-----------------|
+  | PROF    |     4 |     |    |           |                 |
+  #+TBLFM: @2$3='(calc-dnd-mod (string-to-number (org-table-get-constant $1)))
+  #+TBLFM: @4$3='(calc-dnd-mod (string-to-number (org-table-get-constant $1)))
+  #+TBLFM: @8$3='(calc-dnd-mod (string-to-number (org-table-get-constant $1)))
+  #+TBLFM: @9$3='(calc-dnd-mod (string-to-number (org-table-get-constant $1)))
+  #+TBLFM: @15$3='(calc-dnd-mod (string-to-number (org-table-get-constant $1)))
+  #+TBLFM: @21$3='(calc-dnd-mod (string-to-number (org-table-get-constant $1)))
+  #+TBLFM: @2$5..@3$5='(concat "1d20 + " (number-to-string (+ (calc-dnd-pb $PROF $4) (calc-dnd-mod (string-to-number (org-table-get-constant @2$1))))))
+  #+TBLFM: @4$5..@7$5='(concat "1d20 + " (number-to-string (+ (calc-dnd-pb $PROF $4) (calc-dnd-mod (string-to-number (org-table-get-constant @4$1))))))
+  #+TBLFM: @8$5..@8$5='(concat "1d20 + " (number-to-string (+ (calc-dnd-pb $PROF $4) (calc-dnd-mod (string-to-number (org-table-get-constant @8$1))))))
+  #+TBLFM: @9$5..@14$5='(concat "1d20 + " (number-to-string (+ (calc-dnd-pb $PROF $4) (calc-dnd-mod (string-to-number (org-table-get-constant @9$1))))))
+  #+TBLFM: @15$5..@20$5='(concat "1d20 + " (number-to-string (+ (calc-dnd-pb $PROF $4) (calc-dnd-mod (string-to-number (org-table-get-constant @15$1))))))
+  #+TBLFM: @21$5..@25$5='(concat "1d20 + " (number-to-string (+ (calc-dnd-pb $PROF $4) (calc-dnd-mod (string-to-number (org-table-get-constant @21$1))))))
+
+<<<<<<< HEAD
+* Stats
+  | Walking Speed | Flying speed | Climbing Speed | Hit Points | AC            | Death Saves | Inspiration |
+  |---------------+--------------+----------------+------------+---------------+-------------+-------------|
+  |            30 |           30 |             15 | 121/121    | 13 (16 w M.A) |             |             |
+=======
+| Skill           | Ability | Prof | Mod | Roll      |
+|-----------------+---------+------+-----+-----------|
+| Acrobatics      | DEX     |      |   0 | 1d20 + -1 |
+| Animal Handling | WIS     |      |   0 | 1d20 + -1 |
+| Arcana          | INT     |      |   0 | 1d20 + -1 |
+| Athletics       | STR     |      |  -1 | 1d20 + -1 |
+| Deception       | CHA     |      |   0 | 1d20 + -1 |
+| History         | INT     |      |   0 | 1d20 + -1 |
+| Insight         | WIS     |      |   0 | 1d20 + -1 |
+| Intimidation    | CHA     |      |   0 | 1d20 + -1 |
+| Investigation   | INT     |      |   0 | 1d20 + -1 |
+| Medicine        | WIS     |      |   0 | 1d20 + -1 |
+| Nature          | INT     |      |   0 | 1d20 + -1 |
+| Perception      | WIS     |      |   0 | 1d20 + -1 |
+| Performance     | CHA     |      |   0 | 1d20 + -1 |
+| Persuasion      | CHA     |      |   0 | 1d20 + -1 |
+| Religion        | INT     |      |   0 | 1d20 + -1 |
+| Sleight of Hand | DEX     |      |   0 | 1d20 + -1 |
+| Stealth         | DEX     |      |   0 | 1d20 + -1 |
+| Survival        | WIS     |      |   0 | 1d20 + -1 |
+#+TBLFM: $5='(concat "1d20 + " $4)
+
+* Attacks
+  #+NAME: attacks
+  | Weapon          | Ability | PB | Type                          | Die | Mod To Hit | Roll    |
+  |-----------------+---------+----+-------------------------------+-----+------------+---------|
+  | Crossbow, Light | DEX     |    | Piercing                      | 1d8 |          2 | 1d8 + 2 |
+  | Dagger          | DEX     |    | Finesse, Light, Thrown(20/60) | 1d4 |          2 | 1d4 + 2 |
+  | Shortsword      | DEX     |    | Piercing                      | 1d6 |          2 | 1d6 + 2 |
+  #+TBLFM: $6='(+ (calc-dnd-pb $PROF $3) (calc-dnd-mod (string-to-number (org-table-get-constant $2))))
+  #+TBLFM: $7='(concat $5 " + " (number-to-string (calc-dnd-mod (string-to-number (org-table-get-constant $2)))))
+
+
+
+* Proficiencies
+  | Languages | Tools          | Armor   | Weapons |
+  |-----------+----------------+---------+---------|
+  | Common    | Thieves' Tools | Light   | Simple  |
+  | Grung     | Flute          | Medium  | Martial |
+  |           |                | Shields |         |
+
+* info
+** name
+*** **
+** class
+*** sorcerer
+** level
+*** 12
+** race
+*** fairy
+** racial bonuses
+*** +2 1 AS, +1 to 1 AS
+*** +squat nimbleness
+*** +
+*** +
+*** -
+** languages
+*** common
+*** 1 other
+** background
+*** urban bounty hunter
+**** skill proficiencies
+***** deception
+***** stealth
+**** tool proficiencies
+***** gaming set
+***** thieves' tools
+**** equipment
+***** crowbar
+***** robes
+***** 20 gp
+** alignment
+*** chaotic good
+** age
+*** 30
+** height
+*** 3
+** size
+*** small
+** weight
+*** 30
+** eyes
+*** green
+** skin
+*** yes
+** hair 
+*** yes
+** xp
+*** somenum
+** speed
+*** 30 + 5 (S.N) 35
+** hp
+*** 1d6 (or 5) + con mod / sorc level after 1st
+*** 96?
+* personality
+** urban bounty hunter
+*** ear to the ground
+**** You are in frequent contact with people in the segment of society that your chosen quarries move through. These people might be associated with the criminal underworld, the rough-and-tumble folk of the streets, or members of high society. This connection comes in the form of a contact in any city you visit, a person who provides information about the people and places of the local area.
+** traits
+*** I would rather make a new friend than a new enemy.
+** ideals
+*** Redemption. There's a spark of good in everyone. (Good)
+** bonds
+*** I'm guilty of a terrible crime. I hope I can redeem myself for it.
+** flaws
+*** If there's a plan, I'll forget it. If I don't forget it, I'll ignore it.
+* feats [update]
+** racial
+*** squat nimbleness
++ Prerequisite: Dwarf or a Small race
++ You are uncommonly nimble for your race. You gain the following benefits:
++ Increase your Strength or Dexterity score by 1, to a maximum of 20.
++ your walking speed by 5 feet.
++ You gain proficiency in the Acrobatics or Athletics skill (your choice).
++ You have advantage on any Strength (Athletics) or Dexterity (Acrobatics) check you make to escape from being grappled.
+** fey touched
+- Your exposure to the Feywild's magic has changed you, granting you the following benefits:
+- Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
+- You learn the Misty Step spell and one 1st-level spell of your choice. The 1st-level spell must be from the Divination or Enchantment school of magic. You can cast each of these spells without expending a spell slot. Once you cast either of these spells in this way, you can’t cast that spell in this way again until you finish a long rest. You can also cast these spells using spell slots you have of the appropriate level. The spells’ spellcasting ability is the ability increased by this feat.
+** shadow touched
+- Your exposure to the Shadowfell's magic has changed you, granting you the following benefits:
+- Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
+- You learn the Invisibility spell and one 1st-level spell of your choice. The 1st-level spell must be from the Illusion or Necromancy school of magic. You can cast each of these spells without expending a spell slot. Once you cast either of these spells in this way, you can't cast that spell in this way again until you finish a long rest. You can also cast these spells using spell slots you have of the appropriate level. The spells' spellcasting ability is the ability increased by this feat.
+** tough
+*** Your hit point maximum increases by an amount equal to twice your level when you gain this feat. Whenever you gain a level thereafter, your hit point maximum increases by an additional 2 hit points
+** metamagic adept
+*** You've learned how to exert your will on your spells to alter how they function:
+*** You learn two Metamagic options of your choice from the sorcerer class. You can use only one Metamagic option on a spell when you cast it, unless the option says otherwise. Whenever you reach a level that grants the Ability Score Improvement feature, you can replace one of these Metamagic options with another one from the sorcerer class.
+*** You gain 2 sorcery points to spend on Metamagic (these points are added to any sorcery points you have from another source but can be used only on Metamagic). You regain all spent sorcery points when you finish a long rest.
+*** empowered spell
+- When you roll damage for a spell, you can spend 1 sorcery point to reroll a number of the damage dice up to your Charisma modifier (minimum of one). You must use the new rolls.
+- You can use Empowered Spell even if you have already used a different Metamagic option during the casting of the spell.
+*** quickened spell
+- When you cast a spell that has a casting time of 1 action, you can spend 2 sorcery points to change the casting time to 1 bonus action for this casting.
+* equipment
+** weapons
+- crossbow, light, 20 bolts
+- simple weapon
+- two daggers
+** items
+- component pouch
+- bedroll
+  - 2lb
+- blanket
+  - 5lb
+- healer's kit
+  - 3lb
+- 4 ball bearing bags
+  - 2lbx4
+** wonderous items
+*** uncommon 3
++ periapt of wound closure ?
+  - Wondrous item, uncommon (requires attunement)
+  - While you wear this pendant, you stabilize whenever you are dying at the start of your turn. In addition, whenever you roll a Hit Die to regain hit points, double the number of hit points it restores.
++ 2
+  -
++ 3
+  -
+  -
+  -
+*** rare 1
++ amulet of health
+  - Your Constitution score is 19 while you wear this amulet. It has no effect on you if your Constitution is 19 or higher without it.
+*** very rare 0
++
+  -
+  -
+*** attunements 3
+**** amulet of health
+**** i
+**** q
+** dungeoneer's pack
+- backpack
+- crowbar
+- hammer
+- 10 pitons
+- 10 torches
+- tinderbox
+- 10 rations
+- waterskin
+- hempen rope, 50 ft
+>>>>>>> 8ad1332 (not sure what's changed here)
+
+* Traits
+  | Level | Race  | Subrace | Class    | Subclass      | Age | Alignment    | Size        |
+  |-------+-------+---------+----------+---------------+-----+--------------+-------------|
+  |    12 | Fairy |         | Sorcerer | Abberant Mind |  30 | Chaotic Good | Small (3ft) |
+>>>>>>> d431bde (character features)
 * Equipment
   | Name                 | Quantity | Cost (gp) | Weight (lbs) | Total Weight (lbs) | Total Cost (gp) |
   |----------------------+----------+-----------+--------------+--------------------+-----------------|
