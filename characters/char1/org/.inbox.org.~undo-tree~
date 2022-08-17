@@ -1,0 +1,8 @@
+(undo-tree-save-format-version . 1)
+"575a9f01be6efcd359a19b2ac2947c86d77a416a"
+[nil nil nil nil (25289 60113 43673 638000) 0 nil]
+([nil nil ((nil rear-nonsticky nil 199 . 200) (nil fontified nil 164 . 200) (nil fontified nil 77 . 164) (nil fontified nil 76 . 77) (nil fontified nil 37 . 76) (nil fontified nil 1 . 37) (1 . 200) (t 25289 60063 860082 540000)) nil (25289 60113 43671 418000) 0 nil])
+([nil nil ((#("ribbet" 0 6 (line-prefix "" wrap-prefix "" fontified t font-lock-fontified t face org-meta-line)) . 59)) nil (25289 60113 43667 471000) 0 nil])
+([nil nil ((#("r" 0 1 (line-prefix "" wrap-prefix "" fontified t font-lock-fontified t face org-meta-line)) . 59) (#("j" 0 1 (line-prefix "" wrap-prefix "" fontified t font-lock-fontified t face org-meta-line)) . 59) (#("_" 0 1 (line-prefix "" wrap-prefix "" fontified t font-lock-fontified t face org-meta-line)) . 59) (#("y" 0 1 (line-prefix "" wrap-prefix "" fontified t font-lock-fontified t face org-meta-line)) . 59) (#("e" 0 1 (line-prefix "" wrap-prefix "" fontified t font-lock-fontified t face org-meta-line)) . 59) (#("n" 0 1 (line-prefix "" wrap-prefix "" fontified t font-lock-fontified t face org-meta-line)) . 59) (#("w" 0 1 (line-prefix "" wrap-prefix "" fontified t font-lock-fontified t face org-meta-line)) . 59) (#("o" 0 1 (line-prefix "" wrap-prefix "" fontified t font-lock-fontified t face org-meta-line)) . 59) (#("d" 0 1 (line-prefix "" wrap-prefix "" fontified t font-lock-fontified t face org-meta-line)) . 59) (#("_" 0 1 (line-prefix "" wrap-prefix "" fontified t font-lock-fontified t face org-meta-line)) . 59)) nil (25289 60113 43662 359000) 0 nil])
+([nil current ((59 . 64)) nil (25289 60113 43654 259000) 0 nil])
+nil

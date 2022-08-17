@@ -1,0 +1,8 @@
+(undo-tree-save-format-version . 1)
+"6f803fc931b7e6cc095afb6a592a8461c5ac80ca"
+[nil nil nil nil (25289 60148 242402 322000) 0 nil]
+([nil nil ((nil rear-nonsticky nil 180 . 181) (nil fontified nil 145 . 181) (nil fontified nil 77 . 145) (nil fontified nil 76 . 77) (nil fontified nil 37 . 76) (nil fontified nil 1 . 37) (1 . 181) (t 25289 60063 860082 540000)) nil (25289 60148 242399 934000) 0 nil])
+([nil nil ((#("ribbet_downey" 0 13 (line-prefix "" wrap-prefix "" fontified t font-lock-fontified t face org-meta-line)) . 59)) nil (25289 60148 242395 260000) 0 nil])
+([nil nil ((#("r" 0 1 (line-prefix "" wrap-prefix "" fontified t font-lock-fontified t face org-meta-line)) . 59) (#("j" 0 1 (line-prefix "" wrap-prefix "" fontified t font-lock-fontified t face org-meta-line)) . 59) (#("_" 0 1 (line-prefix "" wrap-prefix "" fontified t font-lock-fontified t face org-meta-line)) . 59)) nil (25289 60148 242392 115000) 0 nil])
+([nil current ((59 . 64)) nil (25289 60148 242386 573000) 0 nil])
+nil
