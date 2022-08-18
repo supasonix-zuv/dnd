@@ -48,7 +48,7 @@ parent race in addition to the traits specified for their subrace.
 Relationships among subraces vary significantly from race to race and
 world to world.
 
-* Dwarf                                                               :dwarf:
+* Dwarf :dwarf:
 ** Traits
 Your dwarf character has an assortment of inborn abilities, part and
 parcel of dwarven nature.
@@ -102,7 +102,7 @@ resilience.
 - Dwarven Toughness ::
   Your hit point maximum increases by 1, and it increases by 1 every time you gain a level.
 
-* Elf                                                                   :elf:
+* Elf :elf:
 ** Traits
 Your elf character has a variety of natural abilities, the result of
 thousands of years of elven refinement.
@@ -169,7 +169,7 @@ races.
 - Extra Language ::
   You can speak, read, and write one extra language of your choice.
 
-* Halfling                                                         :halfling:
+* Halfling :halfling:
 ** Traits
 Your halfling character has a number of traits in common with all other
 halflings.
@@ -221,7 +221,7 @@ dwell alongside other races or take up a nomadic life.
 - Naturally Stealthy ::
   You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you.
 
-* Human                                                               :human:
+* Human :human:
 ** Traits
 It's hard to make generalizations about humans, but your human character
 has these traits.
@@ -247,7 +247,7 @@ has these traits.
   other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed
   from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on.
 
-* Dragonborn                                                     :dragonborn:
+* Dragonborn :dragonborn:
 ** Traits
 Your draconic heritage manifests in a variety of traits you share with
 other dragonborn.
@@ -311,7 +311,7 @@ other dragonborn.
   used in the study of magic. The language sounds harsh to most other creatures and includes numerous hard consonants
   and sibilants.
 
-* Gnome                                                               :gnome:
+* Gnome :gnome:
 ** Traits
 Your gnome character has certain characteristics in common with all
 other gnomes.
@@ -378,7 +378,7 @@ that of other gnomes.
   When opened, this music box plays a single song at a moderate volume. The box stops playing when it reaches the song's
   end or when it is closed.
 
-* Half-Elf                                                         :half_elf:
+* Half-Elf :half_elf:
 ** Traits
 Your half-elf character has some qualities in common with elves and some
 that are unique to half-elves.
@@ -415,7 +415,7 @@ that are unique to half-elves.
 - Languages ::
   You can speak, read, and write Common, Elvish, and one extra language of your choice.
 
-* Half-Orc                                                         :half_orc:
+* Half-Orc :half_orc:
 ** Traits
 Your half-orc character has certain traits deriving from your orc
 ancestry.
@@ -458,7 +458,7 @@ ancestry.
   You can speak, read, and write Common and Orc. Orc is a harsh, grating language with hard consonants. It has no script
   of its own but is written in the Dwarvish script.
 
-* Tiefling                                                         :tiefling:
+* Tiefling :tiefling:
 ** Traits
 Tieflings share certain racial traits as a result of their infernal
 descent.
@@ -495,3 +495,93 @@ descent.
 
 - Languages ::
   You can speak, read, and write Common and Infernal.
+
+* Fairy :fairy:
+** Traits
+The Feywild is home to many fantastic peoples, including fairies. Fairies are a wee folk, but not
+nearly as much so as their pixie and sprite friends. The first fairies spoke Elvish, Goblin, or Sylvan, and encounters with human visitors prompted many of them to learn Common as well.
+
+Infused with the magic of the Feywild, most fairies look like Small elves with insectile wings, but each fairy has a special physical characteristic that sets the fairy apart. For your fairy, roll on the Fey Characteristics table or choose an option from it. You're also free to come up with your own characteristic if none of the suggestions below fit your character.
+
+- Ability Score Increase ::
+  Increase one ability score by 2, and increase a different one by 1, or increase three different scores by 1.
+
+- Languages ::
+  You can speak, read, and write Common and one other language that you and your DM agree is appropriate for the character.
+
+- Creature Type ::
+  You are a Fey.
+
+- Life Span ::
+  Fairies have a life span of about a century.
+
+- Size ::
+  You are Small.
+
+- Speed ::
+  Your walking speed is 30 feet.
+
+- Fairy Magic ::
+  You know the /Druidcraft/ cantrip. Starting at 3rd level, you can cast the /Faerie Fire/ spell with this trait. Starting at 5th level, you can also cast the /Enlarge/Reduce/ spell with this trait. Once you cast /Faerie Fire/ or /Enlarge/Reduce/ with this trait, you can't cast that spell with it again until you finish a long rest. You can also cast either of those spells using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells when you cast them with this trait (choose when you select this race).
+
+- Flight ::
+  Because of your wings, you have a flying speed equal to your walking speed. You can't use this flying speed if you're wearing medium or heavy armor.
+
+* Arakocra :arakocra:
+** Traits
+Sequestered in high mountains atop tall trees, the aarakocra evoke fear and wonder. Many of these birdfolk hail from the boundless vistas of the Elemental Plane of Air. They are immigrants, refugees, scouts, and explorers, their outposts functioning as footholds in a world both strange and alien.
+
+- Ability Score Increase ::
+  Your Dexterity score increases by 2, and your Wisdom score increases by 1.
+
+- Age ::
+  Aarakocra reach maturity by age 3. Compared to humans, aarakocra don’t usually live longer than 30 years.
+
+- Alignment ::
+  Most aarakocra are good and rarely choose sides when it comes to law and chaos. Tribal leaders and warriors might be lawful, while explorers and adventurers might tend toward chaotic.
+
+- Size ::
+  Aarakocra are about 5 feet tall. They have thin, lightweight bodies that weigh between 80 and 100 pounds. Your size is Medium.
+
+- Speed ::
+  Your base walking speed is 25 feet.
+
+- Flight ::
+  You have a flying speed of 50 feet. To use this speed, you can’t be wearing medium or heavy armor.
+
+- Talons ::
+  You are proficient with your unarmed strikes, which deal 1d4 slashing damage on a hit.
+
+- Languages ::
+  You can speak, read, and write Common, Aarakocra, and Auran.
+
+* Aasimar :aasimar:
+* Firbolg :firbolg:
+** Traits
+Firbolgs are fey-oriented half-giants. Their tribes cloister in remote forest strongholds, preferring to spend their days in quiet harmony with the woods. When provoked, firbolgs demonstrate formidable skills with weapons and druidic magic.
+- Ability Score Increase ::
+  Your Wisdom score increases by 2, and your Strength score increases by 1.
+
+- Age ::
+  As humanoids related to the fey, firbolg have long lifespans. A firbolg reaches adulthood around 30, and the oldest of them can live for 500 years.
+
+- Size ::
+  Firbolg are between 7 and 8 feet tall and weigh between 240 and 300 pounds. Your size is Medium.
+
+- Speed ::
+  Your base walking speed is 30 feet.
+
+- Firbolg Magic ::
+  You can cast Detect Magic and Disguise Self with this trait, using Wisdom as your spellcasting ability for them. Once you cast either spell, you can't cast it again with this trait until you finish a short or long rest. When you use this version of disguise self, you can seem up to 3 feet shorter than normal, allowing you to more easily blend in with humans and elves.
+
+- Hidden Step ::
+  As a bonus action, you can magically turn invisible until the start of your next turn or until you attack, make a damage roll, or force someone to make a saving throw. Once you use this trait, you can't use it again until you finish a short or long rest.
+
+- Powerful Build ::
+  You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.
+
+- Speech of Beast and Leaf ::
+  You have the ability to communicate in a limited manner with beasts and plants. They can understand the meaning of your words, though you have no special ability to understand them in return. You have advantage on all Charisma checks you make to influence them.
+
+- Languages ::
+  You can speak, read, and write Common, Elvish, and Giant.
