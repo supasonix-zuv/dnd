@@ -7181,7 +7181,7 @@ aren't being worn or carried.
 
 A wave of healing energy washes over a creature you touch. The target regains all its hit points. If the creature is charmed, frightened, paralyzed, or stunned, the condition ends. If the creature is prone, it can use its reaction to stand up. This spell has no effect on undead or constructs.
 
-**** Raveous Void :evocation:wizard:egw:
+**** Raveous Void :evocation:dunamancy:graviturgy:wizard:egw:
 - Casting Time :: 1 action
 - Range :: 1,000 feet
 - Components :: V, S, M (a small, nine pointed star made of iron)
