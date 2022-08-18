@@ -6,7 +6,7 @@
 ** HP
 - Max :: 121
 - Current :: 121
-- Temp :: 83
+- Temp :: 121
 ** Armor Class
 - 13
 ** Initiative
@@ -14,18 +14,18 @@
 ** Speed
 - 30
 ** Money
-| Copper | Silver | Electrum | Gold | Platinum | Total (gp) |
-|--------+--------+----------+------+----------+------------|
-|      0 |     10 |        0 | 7219 |        0 |       7220 |
-#+TBLFM: $6=(($1/100) + ($2 /10) + ($3 /2) + $4 + ($5 *10 ))
+| Copper | Silver | Electrum |  Gold | Platinum | Total (gp) |
+|--------+--------+----------+-------+----------+------------|
+|      0 |     10 |        0 | 11219 |     2500 |      36220 |
+#+TBLFM: $6=(($1/100) + ($2 /10) + ($3 /2) + $4 + ($5 *10))
 ** Sorcerer Points
-- 8
+- 14
 ** Passive Perception
 - 10
 * Spell Slots
 1. 1st Level
-   1. [x]
-   2. [x]
+   1. [ ]
+   2. [ ]
    3. [ ]
    4. [ ]
 2. 2nd Level
@@ -33,18 +33,18 @@
    2. [ ]
    3. [ ]
 3. 3rd Level
-   1. [x]
+   1. [ ]
    2. [ ]
    3. [ ]
 4. 4th Level
-   1. [x]
+   1. [ ]
    2. [ ]
    3. [ ]
 5. 5th level
-   1. [x]
+   1. [ ]
    2. [ ]
 6. 6th Level
-   1. [x]
+   1. [ ]
 
 * Abilities and Skills
   #+name: stats
@@ -850,6 +850,8 @@ target.
 ** Languages
 *** Common
 *** Sylvan
+** Group Name
+*** The Winged Ones
 ** Background
 *** Urban Bounty Hunter
 **** skill proficiencies
@@ -863,7 +865,7 @@ target.
 ***** robes
 ***** 20 gp
 ** Alignment
-*** chaotic good
+*** Chaotic Good
 ** Age
 *** 30
 ** Height
@@ -873,7 +875,7 @@ target.
 ** Weight
 *** 30
 ** Eyes
-*** green
+*** Green
 ** Skin
 *** yes
 ** Hair
@@ -881,7 +883,7 @@ target.
 ** XP
 *** somenum
 ** Speed
-*** 30 + 5 (S.N) 35
+*** 30
 ** HP
 *** 1d6 (or 5) + con mod / sorc level after 1st
 *** 96? + 24
