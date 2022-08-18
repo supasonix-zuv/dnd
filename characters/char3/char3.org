@@ -16,16 +16,12 @@
 ** Money
 | Copper | Silver | Electrum | Gold | Platinum | Total (gp) |
 |--------+--------+----------+------+----------+------------|
-|      0 |      0 |        0 | 7250 |        0 |       7250 |
+|      0 |     10 |        0 | 7219 |        0 |       7250 |
 #+TBLFM: $6=(($1/100) + ($2 /10) + ($3 /2) + $4 + ($5 *10 ))
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d431bde (character features)
 ** Sorcerer Points
 - 14
 ** Passive Perception
- - 10
+- 10
 * Spell Slots
 1. 1st Level
    1. [ ]
@@ -49,10 +45,6 @@
    2. [ ]
 6. 6th Level
    1. [ ]
-=======
-
-** passive per
-*** 10
 
 * Abilities and Skills
   #+name: stats
@@ -102,11 +94,39 @@
   #+TBLFM: @15$5..@20$5='(concat "1d20 + " (number-to-string (+ (calc-dnd-pb $PROF $4) (calc-dnd-mod (string-to-number (org-table-get-constant @15$1))))))
   #+TBLFM: @21$5..@25$5='(concat "1d20 + " (number-to-string (+ (calc-dnd-pb $PROF $4) (calc-dnd-mod (string-to-number (org-table-get-constant @21$1))))))
 
+* Equipment
+  | Name                 | Quantity | Cost (gp) | Weight (lbs) | Total Weight (lbs) | Total Cost (gp) |
+  |----------------------+----------+-----------+--------------+--------------------+-----------------|
+  | Light Crossbow       |        1 |        25 |            5 |                  5 |              25 |
+  | Crossbow bolts (20)  |        2 |         1 |          1.5 |                  3 |              40 |
+  | Dagger               |        4 |         2 |            1 |                  4 |               8 |
+  | Arcane Focus, Orb    |        1 |        20 |            3 |                  3 |              20 |
+  | Backpack             |        1 |         2 |            5 |                  5 |               2 |
+  | Ball Bearings (1000) |        2 |         1 |            2 |                  4 |               2 |
+  | Healer's Kit         |        1 |         5 |            3 |                  3 |               5 |
+  | Crowbar              |        1 |         2 |            5 |                  5 |               2 |
+  | Hammer               |        1 |         1 |            3 |                  3 |               1 |
+  | Piton                |       10 |       .05 |          .25 |                2.5 |             0.5 |
+  | Torch                |       10 |       .01 |            1 |                 10 |             0.1 |
+  | Tinderbox            |        1 |        .5 |            1 |                  1 |             0.5 |
+  | Ration               |       10 |        .5 |            2 |                 20 |              5. |
+  | Bedroll              |        1 |         1 |            2 |                  2 |               1 |
+  | Waterskin            |        1 |        .2 |            5 |                  5 |             0.2 |
+  | Hempen Rope (50ft)   |        1 |         1 |           10 |                 10 |               1 |
+  | Robes                |        1 |         1 |            4 |                  4 |               1 |
+  | Climbers Kit         |        1 |        25 |           12 |                 12 |              25 |
+  |----------------------+----------+-----------+--------------+--------------------+-----------------|
+  | Carry Capacity       |       90 |           |              |              148.5 |           124.3 |
+  #+TBLFM: $5=($2 * $4)
+  #+TBLFM: $6=($2 * $3)
+  #+TBLFM: @>$5=vsum(@<<$5..@>>$5)
+  #+TBLFM: @>$6=vsum(@<<$6..@>>$6)
+  #+TBLFM: @>$2=($STR * 10)
+
 * Stats
-<<<<<<< HEAD
-  | Walking Speed | Flying speed | Climbing Speed | Hit Points | AC            | Death Saves | Inspiration |
-  |---------------+--------------+----------------+------------+---------------+-------------+-------------|
-  |            30 |           30 |             15 | 121/121    | 13 (16 w M.A) |             |             |
+| Walking Speed | Flying speed | Climbing Speed | Hit Points | AC            | Death Saves | Inspiration |
+|---------------+--------------+----------------+------------+---------------+-------------+-------------|
+|            30 |           30 |             15 | 121/121    | 13 (16 w M.A) |             |             |
 
 * Constants
   #+NAME: define-constants-with-src-block
@@ -114,21 +134,21 @@
     (dnd-output-ability-constants table)
     #+END_SRC
 
-    #+RESULTS[8dfb350fab99f9e344c67426dd2f571706d37e1e]: define-constants-with-src-block
+    #+RESULTS[87ad1d0bfe6e86e226ace44824ec4d05b899ea9a]: define-constants-with-src-block
     :results:
     #+CONSTANTS: STR=9
-    #+CONSTANTS: DEX=15
+    #+CONSTANTS: DEX=16
     #+CONSTANTS: CON=19
     #+CONSTANTS: INT=11
     #+CONSTANTS: WIS=11
-    #+CONSTANTS: CHA=16
+    #+CONSTANTS: CHA=20
     #+CONSTANTS: PROF=4
     :end:
 
 * Traits
   | Level | Race  | Subrace | Class    | Subclass      | Age | Alignment    | Size        |
   |-------+-------+---------+----------+---------------+-----+--------------+-------------|
-  |    12 | Fairy |         | Sorcerer | Abberant Mind |  30 | Chaotic Good | Small (3ft) |
+  |    12 | Fairy | N/A     | Sorcerer | Abberant Mind |  30 | Chaotic Good | Small (3ft) |
 
 * Abilities and Skills
   #+name: stats
@@ -179,44 +199,483 @@
   #+TBLFM: @21$5..@25$5='(concat "1d20 + " (number-to-string (+ (calc-dnd-pb $PROF $4) (calc-dnd-mod (string-to-number (org-table-get-constant @21$1))))))
 
 * Stats
-  | Walking Speed | Flying speed | Climbing Speed | Hit Points | AC            | Death Saves | Inspiration |
-  |---------------+--------------+----------------+------------+---------------+-------------+-------------|
-  |            30 |           30 |             15 | 121/121    | 13 (16 w M.A) |             |             |
+| Walking Speed | Flying speed | Climbing Speed | Hit Points | AC            | Death Saves | Inspiration |
+|---------------+--------------+----------------+------------+---------------+-------------+-------------|
+|            30 |           30 |             15 | 121/121    | 13 (16 w M.A) |             |             |
 
 | Skill           | Ability | Prof | Mod | Roll      |
 |-----------------+---------+------+-----+-----------|
-| Acrobatics      | DEX     |      |   0 | 1d20 + -1 |
-| Animal Handling | WIS     |      |   0 | 1d20 + -1 |
-| Arcana          | INT     |      |   0 | 1d20 + -1 |
+| Acrobatics      | DEX     |      |   0 | 1d20 + 0  |
+| Animal Handling | WIS     |      |   0 | 1d20 + 0  |
+| Arcana          | INT     |      |   0 | 1d20 + 0  |
 | Athletics       | STR     |      |  -1 | 1d20 + -1 |
-| Deception       | CHA     |      |   0 | 1d20 + -1 |
-| History         | INT     |      |   0 | 1d20 + -1 |
-| Insight         | WIS     |      |   0 | 1d20 + -1 |
-| Intimidation    | CHA     |      |   0 | 1d20 + -1 |
-| Investigation   | INT     |      |   0 | 1d20 + -1 |
-| Medicine        | WIS     |      |   0 | 1d20 + -1 |
-| Nature          | INT     |      |   0 | 1d20 + -1 |
-| Perception      | WIS     |      |   0 | 1d20 + -1 |
-| Performance     | CHA     |      |   0 | 1d20 + -1 |
-| Persuasion      | CHA     |      |   0 | 1d20 + -1 |
-| Religion        | INT     |      |   0 | 1d20 + -1 |
-| Sleight of Hand | DEX     |      |   0 | 1d20 + -1 |
-| Stealth         | DEX     |      |   0 | 1d20 + -1 |
-| Survival        | WIS     |      |   0 | 1d20 + -1 |
+| Deception       | CHA     |      |   0 | 1d20 + 0  |
+| History         | INT     |      |   0 | 1d20 + 0  |
+| Insight         | WIS     |      |   0 | 1d20 + 0  |
+| Intimidation    | CHA     |      |   0 | 1d20 + 0  |
+| Investigation   | INT     |      |   0 | 1d20 + 0  |
+| Medicine        | WIS     |      |   0 | 1d20 + 0  |
+| Nature          | INT     |      |   0 | 1d20 + 0  |
+| Perception      | WIS     |      |   0 | 1d20 + 0  |
+| Performance     | CHA     |      |   0 | 1d20 + 0  |
+| Persuasion      | CHA     |      |   0 | 1d20 + 0  |
+| Religion        | INT     |      |   0 | 1d20 + 0  |
+| Sleight of Hand | DEX     |      |   0 | 1d20 + 0  |
+| Stealth         | DEX     |      |   0 | 1d20 + 0  |
+| Survival        | WIS     |      |   0 | 1d20 + 0  |
 #+TBLFM: $5='(concat "1d20 + " $4)
 
 * Attacks
   #+NAME: attacks
   | Weapon          | Ability | PB | Type                          | Die | Mod To Hit | Roll    |
   |-----------------+---------+----+-------------------------------+-----+------------+---------|
-  | Crossbow, Light | DEX     |    | Piercing                      | 1d8 |          2 | 1d8 + 2 |
-  | Dagger          | DEX     |    | Finesse, Light, Thrown(20/60) | 1d4 |          2 | 1d4 + 2 |
-  | Shortsword      | DEX     |    | Piercing                      | 1d6 |          2 | 1d6 + 2 |
+  | Crossbow, Light | DEX     |    | Piercing                      | 1d8 |          3 | 1d8 + 3 |
+  | Dagger          | DEX     |    | Finesse, Light, Thrown(20/60) | 1d4 |          3 | 1d4 + 3 |
+  | Shortsword      | DEX     |    | Piercing                      | 1d6 |          3 | 1d6 + 3 |
   #+TBLFM: $6='(+ (calc-dnd-pb $PROF $3) (calc-dnd-mod (string-to-number (org-table-get-constant $2))))
   #+TBLFM: $7='(concat $5 " + " (number-to-string (calc-dnd-mod (string-to-number (org-table-get-constant $2)))))
 
+* Spells
+** Cantrips 8
+**** Druidcraft :druid:phb:
+- Casting Time :: 1 action
+- Range :: 30 feet
+- Components :: V, S
+- Duration :: Instantaneous
 
+Whispering to the spirits of nature, you create one of the following effects within range:
 
+- You create a tiny, harmless sensory effect that predicts what the weather will be at your location for the next 24
+  hours. The effect might manifest as a golden orb for clear skies, a cloud for rain, falling snowflakes for snow, and
+  so on. This effect persists for 1 round.
+
+- You instantly make a flower blossom, a seed pod open, or a leaf bud bloom.
+
+- You create an instantaneous, harmless sensory effect, such as falling leaves, a puff of wind, the sound of a small
+  animal, or the faint odor of skunk. The effect must fit in a 5-foot cube.
+
+- You instantly light or snuff out a candle, a torch, or a small campfire.
+
+**** Mind Sliver :sorcerer:warlock:wizard:tce:
+- Casting Time :: 1 action
+- Range :: 60 feet
+- Components :: V
+- Duration :: 1 round
+
+You drive a disorienting spike of psychic energy into the mind of one creature you can see within range. The target must succeed on an Intelligence saving throw or take 1d6 psychic damage and subtract 1d4 from the next saving throw it makes before the end of your next turn.
+
+At Higher Levels. This spell’s damage increases by 1d6 when you reach certain levels: 5th level (2d6), 11th level (3d6), and 17th level (4d6).
+**** Chill Touch :sorcerer:warlock:wizard:phb:
+- Casting Time :: 1 action
+- Range :: 120 feet
+- Components :: V, S
+- Duration :: 1 Round
+
+You create a ghostly, skeletal hand in the space of a creature within range. Make a ranged spell attack against the
+creature to assail it with the chill of the grave. On a hit, the target takes 1d8 necrotic damage, and it can't regain
+hit points until the start of your next turn. Until then, the hand clings to the target.
+
+If you hit an undead target, it also has disadvantage on attack rolls against you until the end of your next turn.
+
+This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).
+**** Mage Hand :artificer:bard:sorcerer:warlock:wizard:
++ Casting Time :: 1 action
++ Range :: 30 feet
++ Components :: V, S
++ Duration :: 1 minute
+
+ A spectral, floating hand appears at a point you choose within range. The hand lasts for the duration or until you dismiss it as an action. The hand vanishes if it is ever more than 30 feet away from you or if you cast this spell again.
+
+ You can use your action to control the hand. You can use the hand to manipulate an object, open an unlocked door or container, stow or retrieve an item from an open container, or pour the contents out of a vial. You can move the hand up to 30 feet each time you use it.
+
+ The hand can’t attack, activate magical items, or carry more than 10 pounds.
+
+**** Shocking Grasp :sorcerer:wizard:
+- Casting Time :: 1 action
+- Range :: Touch
+- Components :: V, S
+- Duration :: Instantaneous
+
+Lightning springs from your hand to deliver a shock to a creature you try to touch. Make a melee spell attack against
+the target. You have advantage on the attack roll if the target is wearing armor made of metal. On a hit, the target
+takes 1d8 lightning damage, and it can't take reactions until the start of its next turn.
+
+The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).
+
+**** Sword Burst :arificer:sorcerer:warlock:wizard:tce:
+- Casting Time :: 1 action
+- Range :: Self
+- Components :: V
+- Duration :: Instantaneous
+ Fill in later
+**** Light :bard:cleric:sorcerer:wizard:phb:
+- Casting Time :: 1 action
+- Range :: Touch
+- Components :: V, M (a firefly or phosphorescent moss)
+- Duration :: 1 hour
+
+You touch one object that is no larger than 10 feet in any dimension. Until the spell ends, the object sheds bright
+light in a 20-foot radius and dim light for an additional 20 feet. The light can be colored as you like. Completely
+covering the object with something opaque blocks the light. The spell ends if you cast it again or dismiss it as an
+action.
+
+If you target an object held or worn by a hostile creature, that creature must succeed on a Dexterity saving throw to
+avoid the spell.
+
+**** Fire Bolt :artificer:sorcerer:wizard:phb:
+- Casting Time :: 1 action
+- Range :: 120 feet
+- Components :: V, S
+- Duration :: Instantaneous
+
+You hurl a mote of fire at a creature or object within range. Make a ranged spell attack against the target. On a hit,
+the target takes 1d10 fire damage. A flammable object hit by this spell ignites if it isn't being worn or carried.
+
+This spell's damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).
+
+** Spells Known
+1. 1st
+   1. Arms of Hadar (Slotless)
+   2. Dissonant Whispers (Slotless)
+   3. Faerie Fire (Slotless 1/day /Slot optional)
+   4. Chaos Bolt
+   5. Mage Armor
+   6. Magic Missle
+2. 2nd
+   1. Calm Emotions (Slotless)
+   2. Detect Thoughts (Slotless)
+   3. Enlarge/Reduce (Slotless 1/day /Slot optional)
+   4. Blur
+   5. Flaming Sphere
+   6. Warding Wind
+3. 3rd
+   1. Hunger of Hadar (Slotless)
+   2. Sending (Slotless)
+   3. Fireball
+4. 4th
+   1. Evards Black Tentacles (Slotless)
+   2. Summon Abberation (Slotless)
+   3. Vitriolic Sphere
+5. 5th
+   1. Rary's Telepathic Bond (Slotless)
+   2. Telekinesis (Slotless)
+   3. Cloudkill
+   4. Hold Monster
+   5. Synaptic Static
+6. 6th
+   1. Disintegrate
+
+** Spells Described
+*** 1st Level
+**** Faerie Fire :bard:druid:
+- Casting Time :: 1 action
+- Range :: 60 feet
+- Components :: V
+- Duration :: Concentration, up to 1 minute
+
+Each object in a 20-foot cube within range is outlined in blue, green, or violet light (your choice). Any creature in
+the area when the spell is cast is also outlined in light if it fails a Dexterity saving throw. For the duration,
+objects and affected creatures shed dim light in a 10-foot radius.
+
+Any attack roll against an affected creature or object has advantage if the attacker can see it, and the affected
+creature or object can't benefit from being invisible.
+
+**** Mage Armor :sorcerer:wizard:phb:
+- Casting Time :: 1 action
+- Range :: Touch
+- Components :: V, S, M (a piece of cured leather)
+- Duration :: 8 hours
+
+You touch a willing creature who isn't wearing armor, and a protective magical force surrounds it until the spell ends.
+The target's base AC becomes 13 + its Dexterity modifier. The spell ends if the target dons armor or if you dismiss the
+spell as an action.
+
+**** Magic Missile :sorcerer:wizard:phb:
+- Casting Time :: 1 action
+- Range :: 120 feet
+- Components :: V, S
+- Duration :: Instantaneous
+
+You create three glowing darts of magical force. Each dart hits a creature of your choice that you can see within range.
+A dart deals 1d4 + 1 force damage to its target. The darts all strike simultaneously, and you can direct them to hit one
+creature or several.
+
+- At Higher Levels ::
+  When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart for each slot
+  level above 1st.
+
+*** 2nd Level
+**** Flaming Sphere :druid:wizard:
+- Casting Time :: 1 action
+- Range :: 60 feet
+- Components :: V, S, M (a bit of tallow, a pinch of brimstone, and adjusting of powdered iron)
+- Duration :: Concentration, up to 1 minute
+
+A 5-foot diameter sphere of fire appears in an unoccupied space of your choice within range and lasts for the duration.
+Any creature that ends its turn within 5 feet of the sphere must make a Dexterity saving throw. The creature takes 2d6
+fire damage on a failed save, or half as much damage on a successful one.
+
+As a bonus action, you can move the sphere up to 30 feet. If you ram the sphere into a creature, that creature must make
+the saving throw against the sphere's damage, and the sphere stops moving this turn.
+
+When you move the sphere, you can direct it over barriers up to 5 feet tall and jump it across pits up to 10 feet wide.
+The sphere ignites flammable objects not being worn or carried, and it sheds bright light in a 20-foot radius and dim
+light for an additional 20 feet.
+
+- At Higher Levels ::
+  When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d6 for each slot level
+  above 2nd.
+
+**** Calm Emotions :bard:cleric:
+- Casting Time :: 1 action
+- Range :: 60 feet
+- Components :: V, S
+- Duration :: Concentration, up to 1 minute
+
+You attempt to suppress strong emotions in a group of people. Each humanoid in a 20-foot radius sphere centered on a
+point you choose within range must make a Charisma saving throw; a creature can choose to fail this saving throw if it
+wishes. If a creature fails its saving throw, choose one of the following two effects.
+
+You can suppress any effect causing a target to be charmed or frightened. When this spell ends, any suppressed effect
+resumes, provided that its duration has not expired in the meantime.
+
+Alternatively, you can make a target indifferent about creatures of your choice that it is hostile toward. This
+indifference ends if the target is attacked or harmed by a spell or if it witnesses any of its friends being harmed.
+When the spell ends, the creature becomes hostile again, unless the GM rules otherwise.
+
+**** Blur :sorcerer:wizard:
+- Casting Time :: 1 action
+- Range :: Self
+- Components :: V
+- Duration :: Concentration, up to 1 minute
+
+Your body becomes blurred, shifting and wavering to all who can see you.
+For the duration, any creature has disadvantage on attack rolls against
+you. An attacker is immune to this effect if it doesn't rely on sight,
+as with blindsight, or can see through illusions, as with truesight.
+
+**** Enlarge/Reduce :sorcerer:wizard:
+- Casting Time :: 1 action
+- Range :: 30 feet
+- Components :: V, S, M (a pinch of powdered iron)
+- Duration :: Concentration, up to 1 minute
+
+You cause a creature or an object you can see within range to grow
+larger or smaller for the duration. Choose either a creature or an
+object that is neither worn nor carried. If the target is unwilling, it
+can make a Constitution saving throw. On a success, the spell has no
+effect.
+
+If the target is a creature, everything it is wearing and carrying
+changes size with it. Any item dropped by an affected creature returns
+to normal size at once.
+
+- Enlarge ::
+  The target's size doubles in all dimensions, and its weight
+  is multiplied by eight. This growth increases its size by one category-
+  from Medium to Large, for example. If there isn't enough room for the
+  target to double its size, the creature or object attains the maximum
+  possible size in the space available. Until the spell ends, the target
+  also has advantage on Strength checks and Strength saving throws. The
+  target's weapons also grow to match its new size. While these weapons
+  are enlarged, the target's attacks with them deal 1d4 extra damage.
+
+- Reduce ::
+  The target's size is halved in all dimensions, and its
+  weight is reduced to one-eighth of normal. This reduction decreases its
+  size by one category-from Medium to Small, for example. Until the spell
+  ends, the target also has disadvantage on Strength checks and Strength
+  saving throws. The target's weapons also shrink to match its new size.
+  While these weapons are reduced, the target's attacks with them deal 1d4
+  less damage (this can't reduce the damage below 1).
+
+*** 3rd Level
+**** Fireball :sorcerer:wizard:
+- Casting Time :: 1 action
+- Range :: 150 feet
+- Components :: V, S, M (a tiny ball of bat guano and sulfur)
+- Duration :: Instantaneous
+
+A bright streak flashes from your pointing finger to a point you choose
+within range and then blossoms with a low roar into an explosion of
+flame. Each creature in a 20-foot radius sphere centered on that point
+must make a Dexterity saving throw. A target takes 8d6 fire damage on a
+failed save, or half as much damage on a successful one.
+
+The fire spreads around corners. It ignites flammable objects in the
+area that aren't being worn or carried.
+
+- At Higher Levels ::
+  When you cast this spell using a spell slot of 4th
+  level or higher, the damage increases by 1d6 for each slot level above
+  3rd.
+
+*** 4th level
+****
+
+*** 5th level
+**** Cloudkill :sorcerer:wizard:
+- Casting Time :: 1 action
+- Range :: 120 feet
+- Components :: V, S
+- Duration :: Concentration, up to 10 minutes
+
+You create a 20-foot radius sphere of poisonous, yellow-green fog
+centered on a point you choose within range. The fog spreads around
+corners. It lasts for the duration or until strong wind disperses the
+fog, ending the spell. Its area is heavily obscured.
+
+When a creature enters the spell's area for the first time on a turn or
+starts its turn there, that creature must make a Constitution saving
+throw. The creature takes 5d8 poison damage on a failed save, or half as
+much damage on a successful one. Creatures are affected even if they
+hold their breath or don't need to breathe.
+
+The fog moves 10 feet away from you at the start of each of your turns,
+rolling along the surface of the ground. The vapors, being heavier than
+air, sink to the lowest level of the land, even pouring down openings.
+
+- At Higher Levels ::
+  When you cast this spell using a spell slot of 6th
+  level or higher, the damage increases by 1d8 for each slot level above
+  5th.
+
+**** Hold Monster :bard:sorcerer:warlock:wizard:
+- Casting Time :: 1 action
+- Range :: 90 feet
+- Components :: V, S, M (a small, straight piece of iron)
+- Duration :: Concentration, up to 1 minute
+
+Choose a creature that you can see within range. The target must succeed
+on a Wisdom saving throw or be paralyzed for the duration. This spell
+has no effect on undead. At the end of each of its turns, the target can
+make another Wisdom saving throw. On a success, the spell ends on the
+target.
+
+- At Higher Levels ::
+  When you cast this spell using a spell slot of 6th
+  level or higher, you can target one additional creature for each slot
+  level above 5th. The creatures must be within 30 feet of each other when
+  you target them.
+
+**** Telekinesis :sorcerer:wizard:
+- Casting Time :: 1 action
+- Range :: 60 feet
+- Components :: V, S
+- Duration :: Concentration, up to 10 minutes
+
+You gain the ability to move or manipulate creatures or objects by
+thought. When you cast the spell, and as your action each round for the
+duration, you can exert your will on one creature or object that you can
+see within range, causing the appropriate effect below. You can affect
+the same target round after round, or choose a new one at any time. If
+you switch targets, the prior target is no longer affected by the spell.
+
+- Creature ::
+  You can try to move a Huge or smaller creature. Make an
+  ability check with your spellcasting ability contested by the creature's
+  Strength check. If you win the contest, you move the creature up to 30
+  feet in any direction, including upward but not beyond the range of this
+  spell. Until the end of your next turn, the creature is restrained in
+  your telekinetic grip. A creature lifted upward is suspended in mid-air.
+
+  On subsequent rounds, you can use your action to attempt to maintain
+  your telekinetic grip on the creature by repeating the contest.
+
+- Object ::
+  You can try to move an object that weighs up to 1,000
+  pounds. If the object isn't being worn or carried, you automatically
+  move it up to 30 feet in any direction, but not beyond the range of this
+  spell.
+
+  If the object is worn or carried by a creature, you must make an ability
+  check with your spellcasting ability contested by that creature's
+  Strength check. If you succeed, you pull the object away from that
+  creature and can move it up to 30 feet in any direction but not beyond
+  the range of this spell.
+
+  You can exert fine control on objects with your telekinetic grip, such
+  as manipulating a simple tool, opening a door or a container, stowing or
+  retrieving an item from an open container, or pouring the contents from
+  a vial.
+
+*** 6th level
+**** Disintegrate :sorcerer:wizard:
+- Casting Time :: 1 action
+- Range :: 60 feet
+- Components :: V, S, M (a lodestone and a pinch of dust)
+- Duration :: Instantaneous
+
+A thin green ray springs from your pointing finger to a target that you
+can see within range. The target can be a creature, an object, or a
+creation of magical force, such as the wall created by [[*Wall of Force][Wall of Force]].
+
+A creature targeted by this spell must make a Dexterity saving throw. On
+a failed save, the target takes 10d6 + 40 force damage. The target is
+disintegrated if this damage leaves it with 0 hit points.
+
+A disintegrated creature and everything it is wearing and carrying,
+except magic items, are reduced to a pile of fine gray dust. The
+creature can be restored to life only by means of a [[*True Resurrection][True Resurrection]]
+or a [[*Wish][Wish]] spell.
+
+This spell automatically disintegrates a Large or smaller nonmagical
+object or a creation of magical force. If the target is a Huge or larger
+object or creation of force, this spell disintegrates a 10-foot cube
+portion of it. A magic item is unaffected by this spell.
+
+- At Higher Levels ::
+  When you cast this spell using a spell slot of 7th
+  level or higher, the damage increases by 3d6 for each slot level above
+  6th.
+
+* Info
+** Name
+*** Lazuli Islecloud Greenspirit Morel Aspencone
+** Class
+*** Sorcerer
+** Level
+*** 12
+** Race
+*** Fairy
+** Languages
+*** Common
+*** Sylvan
+** Background
+*** Urban Bounty Hunter
+**** skill proficiencies
+***** deception
+***** stealth
+**** tool proficiencies
+***** gaming set
+***** thieves' tools
+**** equipment
+***** crowbar
+***** robes
+***** 20 gp
+** Alignment
+*** chaotic good
+** Age
+*** 30
+** Height
+*** 3
+** Size
+*** Small
+** Weight
+*** 30
+** Eyes
+*** green
+** Skin
+*** yes
+** Hair
+*** yes
+** XP
+*** somenum
+** Speed
+*** 30 + 5 (S.N) 35
+** HP
+*** 1d6 (or 5) + con mod / sorc level after 1st
+*** 96? + 24
 * Proficiencies
   | Languages | Tools          | Armor   | Weapons |
   |-----------+----------------+---------+---------|
@@ -370,35 +829,6 @@
   | Level | Race  | Subrace | Class    | Subclass      | Age | Alignment    | Size        |
   |-------+-------+---------+----------+---------------+-----+--------------+-------------|
   |    12 | Fairy |         | Sorcerer | Abberant Mind |  30 | Chaotic Good | Small (3ft) |
-* Equipment
-  | Name                 | Quantity | Cost (gp) | Weight (lbs) | Total Weight (lbs) | Total Cost (gp) |
-  |----------------------+----------+-----------+--------------+--------------------+-----------------|
-  | Light Crossbow       |        1 |        25 |            5 |                  5 |              25 |
-  | Crossbow bolts       |       40 |         1 |          1.5 |                60. |              40 |
-  | Shortsword           |        1 |        10 |            2 |                  2 |              10 |
-  | Dagger               |        4 |         2 |            1 |                  4 |               8 |
-  | Arcane Focus, Orb    |        1 |        20 |            3 |                  3 |              20 |
-  | Backpack             |        1 |         2 |            5 |                  5 |               2 |
-  | Ball Bearings (1000) |        2 |         1 |            2 |                  4 |               2 |
-  | Healer's Kit         |        1 |         5 |            3 |                  3 |               5 |
-  | Crowbar              |        1 |         2 |            5 |                  5 |               2 |
-  | Hammer               |        1 |         1 |            3 |                  3 |               1 |
-  | Piton                |       10 |       .05 |          .25 |                2.5 |             0.5 |
-  | Torch                |       10 |       .01 |            1 |                 10 |             0.1 |
-  | Tinderbox            |        1 |        .5 |            1 |                  1 |             0.5 |
-  | Ration               |       10 |        .5 |            2 |                 20 |              5. |
-  | Bedroll              |        1 |         1 |            2 |                  2 |               1 |
-  | Waterskin            |        1 |        .2 |            5 |                  5 |             0.2 |
-  | Hempen Rope (50ft)   |        1 |         1 |           10 |                 10 |               1 |
-  | Robes                |        1 |         1 |            4 |                  4 |               1 |
-  |----------------------+----------+-----------+--------------+--------------------+-----------------|
-  | Carry Capacity       |       90 |           |              |              148.5 |           124.3 |
-  #+TBLFM: $5=($2 * $4)
-  #+TBLFM: $6=($2 * $3)
-  #+TBLFM: @>$5=vsum(@<<$5..@>>$5)
-  #+TBLFM: @>$6=vsum(@<<$6..@>>$6)
-  #+TBLFM: @>$2=($STR * 10)
-
 * Constants
   #+NAME: define-constants-with-src-block
   #+BEGIN_SRC elisp :var table=stats :colnames yes :results output drawer :cache yes :lang elisp
@@ -432,53 +862,6 @@
   | Sylvan    | Flute          |       |         |
   |           | Dice           |       |         |
 
-* Info
-** Name
-*** Lazuli Islecloud Greenspirit Morel Aspencone
-** Class
-*** Sorcerer
-** Level
-*** 12
-** Race
-*** Fairy
-** Languages
-*** Common
-*** Sylvan
-** Background
-*** Urban Bounty Hunter
-**** skill proficiencies
-***** deception
-***** stealth
-**** tool proficiencies
-***** gaming set
-***** thieves' tools
-**** equipment
-***** crowbar
-***** robes
-***** 20 gp
-** Alignment
-*** chaotic good
-** Age
-*** 30
-** Height
-*** 3
-** Size
-*** small
-** Weight
-*** 30
-** Eyes
-*** green
-** Skin
-*** yes
-** Hair
-*** yes
-** XP
-*** somenum
-** Speed
-*** 30 + 5 (S.N) 35
-** HP
-*** 1d6 (or 5) + con mod / sorc level after 1st
-*** 96? + 24
 * Personality
 ** Urban Bounty Hunter
 *** ear to the ground
@@ -960,37 +1343,6 @@ portion of it. A magic item is unaffected by this spell.
   level or higher, the damage increases by 3d6 for each slot level above
   6th.
 
-** Sorcery Points
-1. Gift of the Protectors
-   + Prerequisite: 9th level, Pact of the Tome feature
-   + A new page appears in your Book of Shadows. With your permission, a creature can use its action to write its name on that page, which can contain a number of names equal to your proficiency bonus.
-   + When any creature whose name is on the page is reduced to 0 hit points but not killed outright, the creature magically drops to 1 hit point instead. Once this magic is triggered, no creature can benefit from it until you finish a long rest.
-   + As an action, you can magically erase a name on the page by touching it.
-2. Agonizing Blast
-   + Prerequisite: Eldritch Blast cantrip
-   + When you cast Eldritch Blast, add your Charisma modifier to the damage it deals on a hit.
-3. Armor of Shadows
-   + You can cast Mage Armor on yourself at will, without expending a spell slot or material components.
-     + mage armor
-       +
-4. Repelling Blast
-   + Prerequisite: Eldritch Blast cantrip
-   + When you hit a creature with Eldritch Blast, you can push the creature up to 10 feet away from you in a straight line.
-5. Maddening Hex
-   + Prerequisite: 5th level, Hex spell or a warlock feature that curses
-   + As a bonus action, you cause a psychic disturbance around the target cursed by your Hex spell or by a warlock feature of yours, such as Hexblade’s Curse and Sign of Ill Omen. When you do so, you deal psychic damage to the cursed target and each creature of your choice within 5 feet of it. The psychic damage equals your Charisma modifier (minimum of 1 damage). To use this invocation, you must be able to see the cursed target, and it must be within 30 feet of you.
-6. Sculptor of Flesh
-   + Prerequisite: 7th level
-   + You can cast Polymorph once using a warlock spell slot. You can't do so again until you finish a long rest.
-     + polymorph
-7. Visions of Distant Realsm
-   + Prerequisite: 15th level
-   + You can cast Arcane Eye at will, without expending a spell slot.
-     + arcane eye
-8. Shroud of Shadow
-   + Prerequisite: 15th level
-   + You can cast Invisibility at will, without expending a spell slot.
-     + invisibilty
 * Here be dragons
 * Spell Slots
 1. 1st Level

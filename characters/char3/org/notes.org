@@ -1,5 +1,28 @@
 #+STARTUP: content showstars indent
-#+FILETAGS: dnd notes ribbet_downey_jr
+#+FILETAGS: dnd notes ligma
 
-* The party met a shifty dwarf name Stabby :dwarf:npc:party:stabby:
-/Entered on/ [2022-02-10 Thu 08:50]
+* Wyrmham :location:party:
+** Golden Rose
+*** Garbon, inkeep
+*** Goliaths, Dwarves, Kenku
+**** No standout characters
+*** Dwarf mine shutdown
+**** Assorted goods?
+**** No replacements for mine
+**** Due to rok
+*** Rok having children
+**** Baron of town will have info
+***** Gimurt Rakankrak
+** Baron's House
+*** Wants rok children killed
+*** Wants rok gone
+*** One lump sum
+**** 8000 Gp, 5000 Pp
+*** Liftrasa
+**** Mountain Dwarf
+**** Not a fighter
+**** History skill
+*** Gnala Bearkiller Katha ~~
+**** Goliath
+**** Has a bow
+**** Ranger?
