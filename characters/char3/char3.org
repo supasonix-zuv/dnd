@@ -107,10 +107,6 @@
   | Walking Speed | Flying speed | Climbing Speed | Hit Points | AC            | Death Saves | Inspiration |
   |---------------+--------------+----------------+------------+---------------+-------------+-------------|
   |            30 |           30 |             15 | 121/121    | 13 (16 w M.A) |             |             |
-=======
-  | Walking Speed | Flying speed | Climbing Speed | Hit Points | AC | Death Saves | Inspiration |
-  |---------------+--------------+----------------+------------+----+-------------+-------------|
-  |            35 |           35 |             25 | 12/12      | 17 |             |             |
 
 * Constants
   #+NAME: define-constants-with-src-block
@@ -128,15 +124,11 @@
     #+CONSTANTS: CHA=16
     #+CONSTANTS: PROF=4
     :end:
->>>>>>> d431bde (character features)
 
 * Traits
   | Level | Race  | Subrace | Class    | Subclass      | Age | Alignment    | Size        |
   |-------+-------+---------+----------+---------------+-----+--------------+-------------|
   |    12 | Fairy |         | Sorcerer | Abberant Mind |  30 | Chaotic Good | Small (3ft) |
-<<<<<<< HEAD
-=======
->>>>>>> 8ad1332 (not sure what's changed here)
 
 * Abilities and Skills
   #+name: stats
@@ -186,12 +178,11 @@
   #+TBLFM: @15$5..@20$5='(concat "1d20 + " (number-to-string (+ (calc-dnd-pb $PROF $4) (calc-dnd-mod (string-to-number (org-table-get-constant @15$1))))))
   #+TBLFM: @21$5..@25$5='(concat "1d20 + " (number-to-string (+ (calc-dnd-pb $PROF $4) (calc-dnd-mod (string-to-number (org-table-get-constant @21$1))))))
 
-<<<<<<< HEAD
 * Stats
   | Walking Speed | Flying speed | Climbing Speed | Hit Points | AC            | Death Saves | Inspiration |
   |---------------+--------------+----------------+------------+---------------+-------------+-------------|
   |            30 |           30 |             15 | 121/121    | 13 (16 w M.A) |             |             |
-=======
+
 | Skill           | Ability | Prof | Mod | Roll      |
 |-----------------+---------+------+-----+-----------|
 | Acrobatics      | DEX     |      |   0 | 1d20 + -1 |
@@ -379,7 +370,6 @@
   | Level | Race  | Subrace | Class    | Subclass      | Age | Alignment    | Size        |
   |-------+-------+---------+----------+---------------+-----+--------------+-------------|
   |    12 | Fairy |         | Sorcerer | Abberant Mind |  30 | Chaotic Good | Small (3ft) |
->>>>>>> d431bde (character features)
 * Equipment
   | Name                 | Quantity | Cost (gp) | Weight (lbs) | Total Weight (lbs) | Total Cost (gp) |
   |----------------------+----------+-----------+--------------+--------------------+-----------------|
@@ -452,8 +442,8 @@
 ** Race
 *** Fairy
 ** Languages
-*** common
-*** 1 other
+*** Common
+*** Sylvan
 ** Background
 *** Urban Bounty Hunter
 **** skill proficiencies
