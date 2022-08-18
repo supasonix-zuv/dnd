@@ -6,7 +6,7 @@
 ** HP
 - Max :: 121
 - Current :: 121
-- Temp :: 0
+- Temp :: 83
 ** Armor Class
 - 13
 ** Initiative
@@ -19,13 +19,13 @@
 |      0 |     10 |        0 | 7219 |        0 |       7220 |
 #+TBLFM: $6=(($1/100) + ($2 /10) + ($3 /2) + $4 + ($5 *10 ))
 ** Sorcerer Points
-- 14
+- 8
 ** Passive Perception
 - 10
 * Spell Slots
 1. 1st Level
-   1. [ ]
-   2. [ ]
+   1. [x]
+   2. [x]
    3. [ ]
    4. [ ]
 2. 2nd Level
@@ -33,18 +33,18 @@
    2. [ ]
    3. [ ]
 3. 3rd Level
-   1. [ ]
+   1. [x]
    2. [ ]
    3. [ ]
 4. 4th Level
-   1. [ ]
+   1. [x]
    2. [ ]
    3. [ ]
 5. 5th level
-   1. [ ]
+   1. [x]
    2. [ ]
 6. 6th Level
-   1. [ ]
+   1. [x]
 
 * Abilities and Skills
   #+name: stats
@@ -444,7 +444,6 @@ creature or several.
 
 - At Higher Levels ::
   When you cast this spell using a spell slot of 2nd level or higher, each target takes 1d6 extra damage of the type rolled for each slot level above 1st.
-****
 **** Mind Sliver :sorcerer:warlock:wizard:tce:
 - Casting Time :: 1 action
 - Range :: 60 feet
@@ -723,13 +722,7 @@ target.
 - Range :: 60 feet
 - Components :: V, S
 - Duration :: Concentration, up to 10 minutes
-
-You gain the ability to move or manipulate creatures or objects by
-thought. When you cast the spell, and as your action each round for the
-duration, you can exert your will on one creature or object that you can
-see within range, causing the appropriate effect below. You can affect
-the same target round after round, or choose a new one at any time. If
-you switch targets, the prior target is no longer affected by the spell.
+  You gain the ability to move or manipulate creatures or objects by thought. When you cast the spell, and as your action each round for the duration, you can exert your will on one creature or object that you can see within range, causing the appropriate effect below. You can affect the same target round after round, or choose a new one at any time. If you switch targets, the prior target is no longer affected by the spell.
 
 - Creature ::
   You can try to move a Huge or smaller creature. Make an
@@ -764,6 +757,7 @@ you switch targets, the prior target is no longer affected by the spell.
 - Range :: 120 feet
 - Components :: V, S
 - Duration :: Instantaneous
+
   You choose a point within range and cause psychic energy to explode there. Each creature in a 20-foot-radius sphere centered on that point must make an Intelligence saving throw. A creature with an Intelligence score of 2 or lower can’t be affected by this spell. A target takes 8d6 psychic damage on a failed save, or half as much damage on a successful one.
 
   After a failed save, a target has muddled thoughts for 1 minute. During that time, it rolls a d6 and subtracts the number rolled from all its attack rolls and ability checks, as well as its Constitution saving throws to maintain concentration. The target can make an Intelligence saving throw at the end of each of its turns, ending the effect on itself on a success.
@@ -785,23 +779,13 @@ you switch targets, the prior target is no longer affected by the spell.
 - Components :: V, S, M (a lodestone and a pinch of dust)
 - Duration :: Instantaneous
 
-  A thin green ray springs from your pointing finger to a target that you
-  can see within range. The target can be a creature, an object, or a
-  creation of magical force, such as the wall created by [[*Wall of Force][Wall of Force]].
+  A thin green ray springs from your pointing finger to a target that you can see within range. The target can be a creature, an object, or a creation of magical force, such as the wall created by [[*Wall of Force][Wall of Force]].
 
-  A creature targeted by this spell must make a Dexterity saving throw. On
-  a failed save, the target takes 10d6 + 40 force damage. The target is
-  disintegrated if this damage leaves it with 0 hit points.
+  A creature targeted by this spell must make a Dexterity saving throw. On a failed save, the target takes 10d6 + 40 force damage. The target is disintegrated if this damage leaves it with 0 hit points.
 
-  A disintegrated creature and everything it is wearing and carrying,
-  except magic items, are reduced to a pile of fine gray dust. The
-  creature can be restored to life only by means of a [[*True Resurrection][True Resurrection]]
-  or a [[*Wish][Wish]] spell.
+  A disintegrated creature and everything it is wearing and carrying, except magic items, are reduced to a pile of fine gray dust. The creature can be restored to life only by means of a [[*True Resurrection][True Resurrection]] or a [[*Wish][Wish]] spell.
 
-  This spell automatically disintegrates a Large or smaller nonmagical
-  object or a creation of magical force. If the target is a Huge or larger
-  object or creation of force, this spell disintegrates a 10-foot cube
-  portion of it. A magic item is unaffected by this spell.
+  This spell automatically disintegrates a Large or smaller nonmagical object or a creation of magical force. If the target is a Huge or larger object or creation of force, this spell disintegrates a 10-foot cube portion of it. A magic item is unaffected by this spell.
 
 - At Higher Levels ::
   When you cast this spell using a spell slot of 7th
@@ -829,17 +813,17 @@ you switch targets, the prior target is no longer affected by the spell.
 ** Wonderous Items
 *** Uncommon 3
 **** Immovable Rod :dmg:
+- This flat iron rod has a button on one end. You can use an action to press the button, which causes the rod to become magically fixed in place. Until you or another creature uses an action to push the button again, the rod doesn't move, even if it is defying gravity. The rod can hold up to 8,000 pounds of weight. More weight causes the rod to deactivate and fall. A creature can use an action to make a DC 30 Strength check, moving the fixed rod up to 10 feet on a success.
 **** Luckstone :attuned:dmg:
-+1 to ability checks and saving throws
+- +1 to ability checks and saving throws
 **** Weapon of Warning :attuned:dmg:
+- This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can't be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.
 *** Rare 1
-**** Amulet of Health
+**** Amulet of Health :attuned:dmg:
 - Your Constitution score is 19 while you wear this amulet. It has no effect on you if your Constitution is 19 or higher without it.
-*** very rare 0
+*** Very Rare 0
 +
-  -
-  -
-*** attunements 3
+*** Attunements 3
 **** Amulet of Health
 **** Luckstone
 **** Weapon of Warning
