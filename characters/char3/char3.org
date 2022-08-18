@@ -841,6 +841,7 @@ target.
 * Info
 ** Name
 *** Lazuli Islecloud Greenspirit Morel Aspencone
+*** L.I.G.M.A
 ** Class
 *** Sorcerer
 ** Level
