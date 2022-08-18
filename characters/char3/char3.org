@@ -16,7 +16,7 @@
 ** Money
 | Copper | Silver | Electrum | Gold | Platinum | Total (gp) |
 |--------+--------+----------+------+----------+------------|
-|      0 |     10 |        0 | 7219 |        0 |       7250 |
+|      0 |     10 |        0 | 7219 |        0 |       7220 |
 #+TBLFM: $6=(($1/100) + ($2 /10) + ($3 /2) + $4 + ($5 *10 ))
 ** Sorcerer Points
 - 14
@@ -95,33 +95,33 @@
   #+TBLFM: @21$5..@25$5='(concat "1d20 + " (number-to-string (+ (calc-dnd-pb $PROF $4) (calc-dnd-mod (string-to-number (org-table-get-constant @21$1))))))
 
 * Equipment
-  | Name                 | Quantity | Cost (gp) | Weight (lbs) | Total Weight (lbs) | Total Cost (gp) |
-  |----------------------+----------+-----------+--------------+--------------------+-----------------|
-  | Light Crossbow       |        1 |        25 |            5 |                  5 |              25 |
-  | Crossbow bolts (20)  |        2 |         1 |          1.5 |                  3 |              40 |
-  | Dagger               |        4 |         2 |            1 |                  4 |               8 |
-  | Arcane Focus, Orb    |        1 |        20 |            3 |                  3 |              20 |
-  | Backpack             |        1 |         2 |            5 |                  5 |               2 |
-  | Ball Bearings (1000) |        2 |         1 |            2 |                  4 |               2 |
-  | Healer's Kit         |        1 |         5 |            3 |                  3 |               5 |
-  | Crowbar              |        1 |         2 |            5 |                  5 |               2 |
-  | Hammer               |        1 |         1 |            3 |                  3 |               1 |
-  | Piton                |       10 |       .05 |          .25 |                2.5 |             0.5 |
-  | Torch                |       10 |       .01 |            1 |                 10 |             0.1 |
-  | Tinderbox            |        1 |        .5 |            1 |                  1 |             0.5 |
-  | Ration               |       10 |        .5 |            2 |                 20 |              5. |
-  | Bedroll              |        1 |         1 |            2 |                  2 |               1 |
-  | Waterskin            |        1 |        .2 |            5 |                  5 |             0.2 |
-  | Hempen Rope (50ft)   |        1 |         1 |           10 |                 10 |               1 |
-  | Robes                |        1 |         1 |            4 |                  4 |               1 |
-  | Climbers Kit         |        1 |        25 |           12 |                 12 |              25 |
-  |----------------------+----------+-----------+--------------+--------------------+-----------------|
-  | Carry Capacity       |       90 |           |              |              148.5 |           124.3 |
-  #+TBLFM: $5=($2 * $4)
-  #+TBLFM: $6=($2 * $3)
-  #+TBLFM: @>$5=vsum(@<<$5..@>>$5)
-  #+TBLFM: @>$6=vsum(@<<$6..@>>$6)
-  #+TBLFM: @>$2=($STR * 10)
+| Name                | Quantity | Cost (gp) | Weight (lbs) | Total Weight (lbs) | Total Cost (gp) |
+|---------------------+----------+-----------+--------------+--------------------+-----------------|
+| Light Crossbow      |        1 |        25 |            5 |                  5 |              25 |
+| Crossbow bolts (20) |        2 |         1 |          1.5 |                  3 |              40 |
+| Dagger              |        4 |         2 |            1 |                  4 |               8 |
+| Arcane Focus, Orb   |        1 |        20 |            3 |                  3 |              20 |
+| Backpack            |        1 |         2 |            5 |                  5 |               2 |
+| Ball Bearings (1k)  |        2 |         1 |            2 |                  4 |               2 |
+| Healer's Kit        |        1 |         5 |            3 |                  3 |               5 |
+| Crowbar             |        1 |         2 |            5 |                  5 |               2 |
+| Hammer              |        1 |         1 |            3 |                  3 |               1 |
+| Piton               |       10 |       .05 |          .25 |                2.5 |             0.5 |
+| Torch               |       10 |       .01 |            1 |                 10 |             0.1 |
+| Tinderbox           |        1 |        .5 |            1 |                  1 |             0.5 |
+| Ration              |       10 |        .5 |            2 |                 20 |              5. |
+| Bedroll             |        1 |         1 |            2 |                  2 |               1 |
+| Waterskin           |        1 |        .2 |            5 |                  5 |             0.2 |
+| Hempen Rope (50ft)  |        1 |         1 |           10 |                 10 |               1 |
+| Robes               |        1 |         1 |            4 |                  4 |               1 |
+| Climbers Kit        |        1 |        25 |           12 |                 12 |              25 |
+|---------------------+----------+-----------+--------------+--------------------+-----------------|
+| Carry Capacity      |       90 |           |              |              148.5 |           124.3 |
+#+TBLFM: $5=($2 * $4)
+#+TBLFM: $6=($2 * $3)
+#+TBLFM: @>$5=vsum(@<<$5..@>>$5)
+#+TBLFM: @>$6=vsum(@<<$6..@>>$6)
+#+TBLFM: @>$2=($STR * 10)
 
 * Stats
 | Walking Speed | Flying speed | Climbing Speed | Hit Points | AC            | Death Saves | Inspiration |
@@ -313,25 +313,18 @@ The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (
 - Range :: Touch
 - Components :: V, M (a firefly or phosphorescent moss)
 - Duration :: 1 hour
+  You touch one object that is no larger than 10 feet in any dimension. Until the spell ends, the object sheds bright light in a 20-foot radius and dim light for an additional 20 feet. The light can be colored as you like. Completely covering the object with something opaque blocks the light. The spell ends if you cast it again or dismiss it as an action.
 
-You touch one object that is no larger than 10 feet in any dimension. Until the spell ends, the object sheds bright
-light in a 20-foot radius and dim light for an additional 20 feet. The light can be colored as you like. Completely
-covering the object with something opaque blocks the light. The spell ends if you cast it again or dismiss it as an
-action.
-
-If you target an object held or worn by a hostile creature, that creature must succeed on a Dexterity saving throw to
-avoid the spell.
+  If you target an object held or worn by a hostile creature, that creature must succeed on a Dexterity saving throw to avoid the spell.
 
 **** Fire Bolt :artificer:sorcerer:wizard:phb:
 - Casting Time :: 1 action
 - Range :: 120 feet
 - Components :: V, S
 - Duration :: Instantaneous
+  You hurl a mote of fire at a creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 fire damage. A flammable object hit by this spell ignites if it isn't being worn or carried.
 
-You hurl a mote of fire at a creature or object within range. Make a ranged spell attack against the target. On a hit,
-the target takes 1d10 fire damage. A flammable object hit by this spell ignites if it isn't being worn or carried.
-
-This spell's damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).
+  This spell's damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).
 
 ** Spells Known
 1. 1st
@@ -404,6 +397,9 @@ creature or several.
   When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart for each slot
   level above 1st.
 
+**** Arms of Hadar
+**** Dissonant Whispers
+**** Chaos Bolt
 *** 2nd Level
 **** Flaming Sphere :druid:wizard:
 - Casting Time :: 1 action
@@ -460,15 +456,15 @@ as with blindsight, or can see through illusions, as with truesight.
 - Components :: V, S, M (a pinch of powdered iron)
 - Duration :: Concentration, up to 1 minute
 
-You cause a creature or an object you can see within range to grow
-larger or smaller for the duration. Choose either a creature or an
-object that is neither worn nor carried. If the target is unwilling, it
-can make a Constitution saving throw. On a success, the spell has no
-effect.
+  You cause a creature or an object you can see within range to grow
+  larger or smaller for the duration. Choose either a creature or an
+  object that is neither worn nor carried. If the target is unwilling, it
+  can make a Constitution saving throw. On a success, the spell has no
+  effect.
 
-If the target is a creature, everything it is wearing and carrying
-changes size with it. Any item dropped by an affected creature returns
-to normal size at once.
+  If the target is a creature, everything it is wearing and carrying
+  changes size with it. Any item dropped by an affected creature returns
+  to normal size at once.
 
 - Enlarge ::
   The target's size doubles in all dimensions, and its weight
@@ -489,6 +485,8 @@ to normal size at once.
   While these weapons are reduced, the target's attacks with them deal 1d4
   less damage (this can't reduce the damage below 1).
 
+**** Warding Wind
+**** Detect Thoughts
 *** 3rd Level
 **** Fireball :sorcerer:wizard:
 - Casting Time :: 1 action
@@ -510,9 +508,12 @@ area that aren't being worn or carried.
   level or higher, the damage increases by 1d6 for each slot level above
   3rd.
 
+**** Hunger of Hadar
+**** Sending
 *** 4th level
-****
-
+**** Evard's Black Tentacles
+**** Summon Abberation
+**** Vitriolic Sphere
 *** 5th level
 **** Cloudkill :sorcerer:wizard:
 - Casting Time :: 1 action
@@ -599,6 +600,8 @@ you switch targets, the prior target is no longer affected by the spell.
   retrieving an item from an open container, or pouring the contents from
   a vial.
 
+**** Synaptic Static
+**** Rary's Telepathic Bond
 *** 6th level
 **** Disintegrate :sorcerer:wizard:
 - Casting Time :: 1 action
@@ -606,28 +609,72 @@ you switch targets, the prior target is no longer affected by the spell.
 - Components :: V, S, M (a lodestone and a pinch of dust)
 - Duration :: Instantaneous
 
-A thin green ray springs from your pointing finger to a target that you
-can see within range. The target can be a creature, an object, or a
-creation of magical force, such as the wall created by [[*Wall of Force][Wall of Force]].
+  A thin green ray springs from your pointing finger to a target that you
+  can see within range. The target can be a creature, an object, or a
+  creation of magical force, such as the wall created by [[*Wall of Force][Wall of Force]].
 
-A creature targeted by this spell must make a Dexterity saving throw. On
-a failed save, the target takes 10d6 + 40 force damage. The target is
-disintegrated if this damage leaves it with 0 hit points.
+  A creature targeted by this spell must make a Dexterity saving throw. On
+  a failed save, the target takes 10d6 + 40 force damage. The target is
+  disintegrated if this damage leaves it with 0 hit points.
 
-A disintegrated creature and everything it is wearing and carrying,
-except magic items, are reduced to a pile of fine gray dust. The
-creature can be restored to life only by means of a [[*True Resurrection][True Resurrection]]
-or a [[*Wish][Wish]] spell.
+  A disintegrated creature and everything it is wearing and carrying,
+  except magic items, are reduced to a pile of fine gray dust. The
+  creature can be restored to life only by means of a [[*True Resurrection][True Resurrection]]
+  or a [[*Wish][Wish]] spell.
 
-This spell automatically disintegrates a Large or smaller nonmagical
-object or a creation of magical force. If the target is a Huge or larger
-object or creation of force, this spell disintegrates a 10-foot cube
-portion of it. A magic item is unaffected by this spell.
+  This spell automatically disintegrates a Large or smaller nonmagical
+  object or a creation of magical force. If the target is a Huge or larger
+  object or creation of force, this spell disintegrates a 10-foot cube
+  portion of it. A magic item is unaffected by this spell.
 
 - At Higher Levels ::
   When you cast this spell using a spell slot of 7th
   level or higher, the damage increases by 3d6 for each slot level above
   6th.
+
+* Equipment
+** Weapons
+- crossbow, light, 20 bolts
+- simple weapon
+- two daggers
+- Weapon of Warding
+** Items
+- component pouch
+- bedroll
+  - 2lb
+- blanket
+  - 5lb
+- healer's kit
+  - 3lb
+- 4 ball bearing bags
+  - 2lbx4
+** Wonderous Items
+*** Uncommon 3
+**** Immovable Rod :dmg:
+**** Luckstone :attuned:dmg:
++1 to ability checks and saving throws
+**** Weapon of Warning :attuned:dmg:
+*** Rare 1
+**** Amulet of Health
+- Your Constitution score is 19 while you wear this amulet. It has no effect on you if your Constitution is 19 or higher without it.
+*** very rare 0
++
+  -
+  -
+*** attunements 3
+**** Amulet of Health
+**** Luckstone
+**** Weapon of Warning
+** Dungeoneer's Pack
+- backpack
+- crowbar
+- hammer
+- 10 pitons
+- 10 torches
+- tinderbox
+- 10 rations
+- waterskin
+- hempen rope, 50 ft
 
 * Info
 ** Name
@@ -736,35 +783,19 @@ portion of it. A magic item is unaffected by this spell.
 ** hp
 *** 1d6 (or 5) + con mod / sorc level after 1st
 *** 96?
-* personality
-** urban bounty hunter
-*** ear to the ground
+* Personality
+** Urban Bounty Hunter
+*** Ear to the Ground
 **** You are in frequent contact with people in the segment of society that your chosen quarries move through. These people might be associated with the criminal underworld, the rough-and-tumble folk of the streets, or members of high society. This connection comes in the form of a contact in any city you visit, a person who provides information about the people and places of the local area.
-** traits
+** Traits
 *** I would rather make a new friend than a new enemy.
-** ideals
+** Ideals
 *** Redemption. There's a spark of good in everyone. (Good)
-** bonds
+** Bonds
 *** I'm guilty of a terrible crime. I hope I can redeem myself for it.
-** flaws
+** Flaws
 *** If there's a plan, I'll forget it. If I don't forget it, I'll ignore it.
-* feats [update]
-** racial
-*** squat nimbleness
-+ Prerequisite: Dwarf or a Small race
-+ You are uncommonly nimble for your race. You gain the following benefits:
-+ Increase your Strength or Dexterity score by 1, to a maximum of 20.
-+ your walking speed by 5 feet.
-+ You gain proficiency in the Acrobatics or Athletics skill (your choice).
-+ You have advantage on any Strength (Athletics) or Dexterity (Acrobatics) check you make to escape from being grappled.
-** fey touched
-- Your exposure to the Feywild's magic has changed you, granting you the following benefits:
-- Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
-- You learn the Misty Step spell and one 1st-level spell of your choice. The 1st-level spell must be from the Divination or Enchantment school of magic. You can cast each of these spells without expending a spell slot. Once you cast either of these spells in this way, you can’t cast that spell in this way again until you finish a long rest. You can also cast these spells using spell slots you have of the appropriate level. The spells’ spellcasting ability is the ability increased by this feat.
-** shadow touched
-- Your exposure to the Shadowfell's magic has changed you, granting you the following benefits:
-- Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
-- You learn the Invisibility spell and one 1st-level spell of your choice. The 1st-level spell must be from the Illusion or Necromancy school of magic. You can cast each of these spells without expending a spell slot. Once you cast either of these spells in this way, you can't cast that spell in this way again until you finish a long rest. You can also cast these spells using spell slots you have of the appropriate level. The spells' spellcasting ability is the ability increased by this feat.
+* feats
 ** tough
 *** Your hit point maximum increases by an amount equal to twice your level when you gain this feat. Whenever you gain a level thereafter, your hit point maximum increases by an additional 2 hit points
 ** metamagic adept
@@ -776,55 +807,6 @@ portion of it. A magic item is unaffected by this spell.
 - You can use Empowered Spell even if you have already used a different Metamagic option during the casting of the spell.
 *** quickened spell
 - When you cast a spell that has a casting time of 1 action, you can spend 2 sorcery points to change the casting time to 1 bonus action for this casting.
-* equipment
-** weapons
-- crossbow, light, 20 bolts
-- simple weapon
-- two daggers
-** items
-- component pouch
-- bedroll
-  - 2lb
-- blanket
-  - 5lb
-- healer's kit
-  - 3lb
-- 4 ball bearing bags
-  - 2lbx4
-** wonderous items
-*** uncommon 3
-+ periapt of wound closure ?
-  - Wondrous item, uncommon (requires attunement)
-  - While you wear this pendant, you stabilize whenever you are dying at the start of your turn. In addition, whenever you roll a Hit Die to regain hit points, double the number of hit points it restores.
-+ 2
-  -
-+ 3
-  -
-  -
-  -
-*** rare 1
-+ amulet of health
-  - Your Constitution score is 19 while you wear this amulet. It has no effect on you if your Constitution is 19 or higher without it.
-*** very rare 0
-+
-  -
-  -
-*** attunements 3
-**** amulet of health
-**** i
-**** q
-** dungeoneer's pack
-- backpack
-- crowbar
-- hammer
-- 10 pitons
-- 10 torches
-- tinderbox
-- 10 rations
-- waterskin
-- hempen rope, 50 ft
->>>>>>> 8ad1332 (not sure what's changed here)
-
 * Traits
   | Level | Race  | Subrace | Class    | Subclass      | Age | Alignment    | Size        |
   |-------+-------+---------+----------+---------------+-----+--------------+-------------|
@@ -904,50 +886,6 @@ resist its effects, you can spend 3 sorcery points to give one target of
 the spell disadvantage on its first saving throw made against the spell.
 
 *** Seeking Spell
-
-* Equipment
-** Weapons
-- crossbow, light, 20 bolts
-- simple weapon
-- two daggers
-- Weapon of Warding
-** Items
-- component pouch
-- bedroll
-  - 2lb
-- blanket
-  - 5lb
-- healer's kit
-  - 3lb
-- 4 ball bearing bags
-  - 2lbx4
-** Wonderous Items
-*** Uncommon 3
-**** Immovable Rod :dmg:
-**** Luckstone :attuned:dmg:
-+1 to ability checks and saving throws
-**** Weapon of Warning :attuned:dmg:
-*** Rare 1
-**** Amulet of Health
-- Your Constitution score is 19 while you wear this amulet. It has no effect on you if your Constitution is 19 or higher without it.
-*** very rare 0
-+
-  -
-  -
-*** attunements 3
-**** Amulet of Health
-**** Luckstone
-**** Weapon of Warning
-** Dungeoneer's Pack
-- backpack
-- crowbar
-- hammer
-- 10 pitons
-- 10 torches
-- tinderbox
-- 10 rations
-- waterskin
-- hempen rope, 50 ft
 
 * Spells
 ** Cantrips 8
@@ -1385,78 +1323,13 @@ portion of it. A magic item is unaffected by this spell.
 *** 4th asi
 *** 8th fey touch
 *** 12th shadow touch
-* patron
-** fathomless
-*** tentacle of the deep
-- At 1st level, you can magically summon a spectral tentacle that strikes at your foes. As a bonus action, you create a 10-foot-long tentacle at a point you can see within 60 feet of you. The tentacle lasts for 1 minute or until you use this feature to create another tentacle.
-- When you create the tentacle, you can make a melee spell attack against one creature within 10 feet of it. On a hit, the target takes 1d8 cold damage, and its speed is reduced by 10 feet until the start of your next turn. When you reach 10th level in this class, the damage increases to 2d8.
-- As a bonus action on your turn, you can move the tentacle up to 30 feet and repeat the attack .
-- You can summon the tentacle a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
-*** gift of the sea
--Also at 1st level, you gain a swimming speed of 40 feet, and you can breathe underwater.
-*** oceanic soul
--At 6th level, you are now even more at home in the depths. You gain resistance to cold damage. In addition, when you are fully submerged, any creature that is also fully submerged can understand your speech, and you can understand theirs
-*** guardian coil
-- At 6th level, your Tentacle of the Deeps can defend you and others, interposing itself between them and harm. When you or a creature you can see takes damage while within 10 feet of the tentacle, you can use your reaction to choose one of those creatures and reduce the damage to that creature by 1d8. When you reach 10th level in this class, the damage reduced by the tentacle increases to 2d8.
-*** grasping tentacles
-- Starting at 10th level, you learn the spell Evard's Black Tentacles. It counts as a warlock spell for you, but it doesn't count against the number of spells you know. You can also cast it once without using a spell slot, and you regain the ability to do so when you finish a long rest.
-- Whenever you cast this spell, your patron's magic bolsters you, granting you a number of temporary hit points equal to your warlock level. Moreover, damage can't break your concentration on this spell.
-*** fathomless plunge
-- When you reach 14th level, you can magically open temporary conduits to watery destinations. As an action, you can teleport yourself and up to five other willing creatures that you can see within 30 feet of you. Amid a whirl of tentacles, you all vanish and then reappear up to 1 mile away in a body of water you've seen (pond size or larger) or within 30 feet of it, each of you appearing in an unoccupied space within 30 feet of the others.
-- Once you use this feature, you can't use it again until you finish a short or long rest.
-* saving throws
 * skills
 ** deception
 * level bonuses
 ** ability score improvement
 *** : 4,8,12,16,19: 1 ablility +2 or 2 ability +1, cap 20
 **** 4th +2 CHA
-** feats
-*** replace asi, same requirements
-**** 8th fey touched
-- Your exposure to the Feywild's magic has changed you, granting you the following benefits:
-- Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
-- You learn the Misty Step spell and one 1st-level spell of your choice. The 1st-level spell must be from the Divination or Enchantment school of magic. You can cast each of these spells without expending a spell slot. Once you cast either of these spells in this way, you can’t cast that spell in this way again until you finish a long rest. You can also cast these spells using spell slots you have of the appropriate level. The spells’ spellcasting ability is the ability increased by this feat.
-**** 12th shadow touched
-- Your exposure to the Shadowfell's magic has changed you, granting you the following benefits:
-- Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
-- You learn the Invisibility spell and one 1st-level spell of your choice. The 1st-level spell must be from the Illusion or Necromancy school of magic. You can cast each of these spells without expending a spell slot. Once you cast either of these spells in this way, you can't cast that spell in this way again until you finish a long rest. You can also cast these spells using spell slots you have of the appropriate level. The spells' spellcasting ability is the ability increased by this feat.
-**** 16th tough
-- + 40 hp
-**** 19th metamagic adept
-- empowered spell
-- quickened
-** mystic arcanum
-*** 11th 
-**** 6th level warlock spell
-*****      once per long rest
-*****      no spell slot usage
-*** 13th
-****  7th level warlock spell
-*****      once per long rest
-*****      no spell slot usage
-*** 15th
-****  8th level warlock spell
-*****      once per long rest
-*****      no spell slot usage
-*** 17th
-****  9th level warlock spell
-*****      once per long rest
-*****      no spell slot usage
-** eldritch master 
-*** 20th
-**** spend 1 minute entreating patron to regen pact magic spell slot
-**** long rest
-** pact of the tome
-- Your patron gives you a grimoire called a Book of Shadows. When you gain this feature, choose three cantrips from any class's spell list (the three needn't be from the same list). While the book is on your person, you can cast those cantrips at will. They don't count against your number of cantrips known. If they don't appear on the warlock spell list, they are nonetheless warlock spells for you.
-- If you lose your Book of Shadows, you can perform a 1-hour ceremony to receive a replacement from your patron. This ceremony can be performed during a short or long rest, and it destroys the previous book. The book turns to ash when you die.
 * additional info
-** Grovel, Cower, and Beg
-*** As an action on your turn, you can cower pathetically to distract nearby foes. Until the end of your next turn, your allies gain advantage on attack rolls against enemies within 10 feet of you that can see you. Once you use this trait, you can't use it again until you finish a short or long rest.
-** Pack Tactics
-*** You have advantage on an attack roll against a creature if at least one of your allies is within 5 feet of the creature and the ally isn't incapacitated.
-** Sunlight Sensitivity
-*** You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight.
 ** Magic Theme
 *** brine-scented shapes of sharks, jellyfish, octopi, and other sea creatures
 * datum
