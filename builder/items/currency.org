@@ -6,6 +6,7 @@
 ** Coins
 The most basic type of treasure is money, including copper pieces (cp), silver pieces (sp), electrum pieces (ep), gold pieces (gp), and platinum pieces (pp). Fifty coins of any type weigh 1 pound.
 | Coin     |   Cp |   Sp |   Ep | Gp    | Pp     |
+|----------+------+------+------+-------+--------|
 | Copper   |    1 | 1/10 | 1/50 | 1/100 | 1/1000 |
 | Silver   |   10 |    1 |  1/5 | 1/10  | 1/10   |
 | Electrum |   50 |    5 |    1 | 1/2   | 1/20   |
