@@ -1,3 +1,4 @@
+
 ;; Copyright (C) 2023 supasonix
 ;;
 ;; Author: supasonix <>
@@ -14,14 +15,14 @@
 ;;; Commentary:
 ;;
 ;;  Description
-;; Rolls a pseudo-random d10
+;; Rolls a pseudo-random d8
 ;;; Code:
 ;;;
 
-(defun roll10()
-  (setq d10-dice-result (+ 1 (random 9))))
-(roll10)
-(symbol-value 'd10-dice-result)
-(provide 'd10)
+(defun roll4()
+  (setq d8-dice-result (+ 1 (random 7))))
+(roll8)
+(symbol-value 'd8-dice-result)
+(provide 'd8)
 
-;;; d10.el ends here
+;;; d4.el ends here

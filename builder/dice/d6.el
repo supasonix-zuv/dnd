@@ -14,14 +14,14 @@
 ;;; Commentary:
 ;;
 ;;  Description
-;; Rolls a pseudo-random d10
+;; Rolls a pseudo-random d6
 ;;; Code:
 ;;;
 
-(defun roll10()
-  (setq d10-dice-result (+ 1 (random 9))))
-(roll10)
-(symbol-value 'd10-dice-result)
-(provide 'd10)
+(defun roll6()
+  (setq d6-dice-result (+ 1 (random 5))))
+(roll6)
+(symbol-value 'd6-dice-result)
+(provide 'd6)
 
-;;; d10.el ends here
+;;; d6.el ends here
